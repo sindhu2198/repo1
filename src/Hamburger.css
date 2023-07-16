@@ -1,0 +1,101 @@
+.hamburger-menu-container {
+    /* ...existing css... */
+    display: none; /* initially hide the hamburger menu */
+    position: relative;
+}
+
+.nav-button {
+    color: #fff; /* sets the color of the text in nav-button to white */
+}
+  
+  .hamburger-icon {
+    display: block;
+    width: 20px;
+    height: 16px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .icon-line {
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .icon-line:nth-child(1) {
+    top: 0;
+  }
+  
+  .icon-line:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .icon-line:nth-child(3) {
+    bottom: 0;
+  }
+  
+  .hamburger-icon:hover .icon-line {
+    background-color: #ccc;
+  }
+  
+  .menu-items {
+   
+    flex-direction: column;
+    justify-content: flex-start;
+    position: absolute;
+    top: 100%;
+    right: 0;
+ 
+    width: fit-content; /* set a fixed width */
+    border-radius: 0px;
+    overflow: hidden;
+
+    z-index: 1;
+    margin-right: 10px;/* add some space to the right */
+    height: 100vh;
+  }
+   
+  
+  .menu-items {
+    /* ...existing css... */
+    overflow: hidden;
+    display: none; /* initially hide the menu items */
+  }
+  
+  /* ...existing css... */
+  
+ 
+
+  @media screen and (max-width: 768px) {
+    .hamburger-menu-container {
+        display: flex; /* show the hamburger menu */
+       
+    }
+    
+    .nav-list {
+        
+        display: none; /* hide the regular navigation */
+    }
+
+    
+    .menu-items {
+        display: flex; /* show the menu items when in mobile view */
+      }
+    }
+    
+    .menu-item {
+      /* Styling for the individual menu items. Adjust as needed. */
+      padding: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .menu-item:hover {
+      font-size: medium;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+}
