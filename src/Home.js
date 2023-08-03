@@ -25,6 +25,9 @@ function Home() {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
   const handleHover = (nav) => {
     setActiveNav(nav);
   };
@@ -93,7 +96,7 @@ function Home() {
             )}
             <ul className="nav-list">
           
-              {/* <li>
+              <li>
                 <button
                   className={`nav-button ${activeNav === "about" ? "active" : ""}`}
                   onClick={() => handleNavigation(aboutRef)}
@@ -102,12 +105,7 @@ function Home() {
                 >
                   ABOUT
                 </button>
-              </li> */}
-              <li>
-              <button className="nav-button" onClick={() => handleNavigation(aboutRef)}>
-               ABOUT
-              </button>
-            </li>
+              </li>              
 
               
               <li>
@@ -166,17 +164,28 @@ function Home() {
           
         </nav>
       </header>
-      <div className="content">
-        {showWelcome && (
+          <div className="content">
+            
+            <div class="Name__Container ">
+              <div class="ContentTitle--one">
+            <div class="Name__content">Ratan Tejaswi</div>
+            </div>
+ 
+          </div>
+        {/* {showWelcome && (
           <Welcome />
-        )}
+        )} */}
       </div>
 
-      {/* <div className="about-container">
-        <Aboutpage />
-      </div> */}
+      <div class= "footer__container">
+      <div onClick={() => scrollToSection(aboutRef)} className="arrow-link">
+        <div className="arrow">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="Panel__arrow"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 12l-4-4h8l-4 4z" fill="#ffffff"></path></svg>
+        </div>
+      </div>
+      </div>
 
-      <footer>
+     
         <div className="night">
           <div className="shooting_star"></div>
           <div className="shooting_star"></div>
@@ -187,15 +196,13 @@ function Home() {
           <div className="shooting_star"></div>
           <div className="shooting_star"></div>
         </div>
-        <Link to="#scroll-target" className="arrow-link">
-          <div className="arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="Panel__arrow"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 12l-4-4h8l-4 4z" fill="#ffffff"></path></svg>
-          </div>
-        </Link>
-        <div id="scroll-target">
-          {/* Content to scroll to */}
-        </div>
-      </footer>
+        
+
+        <div ref={aboutRef}>
+        <Aboutpage />
+      </div>
+   
+  
        
 
 
