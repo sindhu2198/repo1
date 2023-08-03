@@ -20,7 +20,7 @@
     align-items: center;
     height: 100px;
     background-color: transparent;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -37,7 +37,12 @@
     color: #ffffff;
     font-family: 'Merriweather Sans', sans-serif;
     text-align: start;
-    box-sizing: border-box
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
   }
   
   

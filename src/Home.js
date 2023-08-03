@@ -71,9 +71,12 @@ function Home() {
           @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,350;1,300;1,500&display=swap');
         `}
       </style>
-      <Link to="/" className="logo">
-          <Logo className="logo-svg" fill="#ffffff" />
-        </Link>
+      
+     
+    <button className="logo" onClick={() => window.scrollTo(0, 0)}>
+      <Logo className="logo-svg" fill="#ffffff" />
+    </button>
+
 
         <nav>
           <div className="hamburger-menu-container" onClick={handleNavToggle}>
