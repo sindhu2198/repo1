@@ -1,37 +1,31 @@
 import React from "react";
 import "./Aboutpage.css";
 import propic from "./AllImages/propic.jpg";
+import "./Home.css"
 
-function Aboutpage() {
+function Aboutpage({ projectRef, scrollToSection }) {
   return (
-    
-      <div className="about-content">
-        <h1>About Me</h1>
-        <p>
-          I am a passionate web developer with expertise in front-end
-          development. I love creating beautiful and interactive user
-          interfaces using modern web technologies.
-        </p>
-        <p>
-          With several years of experience in the field, I have worked on
-          various projects, both individually and as part of a team. My skills
-          include HTML, CSS, JavaScript, React, and more.
-        </p>
-        <p>
-          In addition to web development, I also have a strong interest in
-          design and UI/UX principles. I strive to create visually appealing
-          and user-friendly websites that deliver a seamless experience.
-        </p>
-        <p>
-          If you have any questions or would like to collaborate, feel free to
-          get in touch with me. I'm always open to new opportunities and
-          exciting projects.
-        </p>
+    <div id="about" className="about-container">  
+      <div className="about-content">      
+        <div className="description">
+          <h1>About Me</h1>
+          <p>Your description goes here.</p>
+        </div>
         <div className="profile-image">
           <img src={propic} alt="Profile" />
         </div>
       </div>
-    
+      <div className="footer__container">
+   <button
+       className="arrow-link"
+       onClick={() => scrollToSection(projectRef)}
+   >
+       <div className="arrow">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="Panel__arrow"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 12l-4-4h8l-4 4z" fill="#ffffff"></path></svg>
+       </div>
+   </button>
+</div>
+    </div>
   );
 }
 

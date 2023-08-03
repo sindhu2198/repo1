@@ -704,12 +704,12 @@ body {
 
 .Panel-footer {
     display: grid;
-    height: 25vh;
+    height: 20vh;
     place-items: center;
 }
 
 .Panel__arrow {
-  animation: grow-in 1s ease-in-out 0s backwards, grow-out 2.5s cubic-bezier(.445,.05,.55,.95) 0s infinite;
+  animation: grow-in 1s ease-in-out 0s backwards, grow-out 1.5s cubic-bezier(.445,.05,.55,.95) 0s infinite;
   cursor: pointer;
   display: inline-flex;
   height: 50%;
