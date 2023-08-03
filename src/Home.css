@@ -694,3 +694,45 @@ body {
   height: 25vh;
   place-items: center;
 }
+
+
+
+.Panel-footer {
+    display: grid;
+    height: 25vh;
+    place-items: center;
+}
+
+.Panel__arrow {
+  animation: grow-in 1s ease-in-out 0s backwards, grow-out 2.5s cubic-bezier(.445,.05,.55,.95) 0s infinite;
+  cursor: pointer;
+  display: inline-flex;
+  height: 50%;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: baseline;
+}
+
+  .arrow-link {
+    cursor: pointer; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 9999;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  
+
+  }
+  
+  .arrow-link:hover {
+    transform: scale(1.1); /* Enlarges the arrow-link slightly when hovered over */
+    transition: all 0.2s ease-in-out; /* Makes the enlarging effect smooth */
+   
+  }
+
+  

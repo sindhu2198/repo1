@@ -176,14 +176,20 @@ function Home() {
           <Welcome />
         )} */}
       </div>
+      <div class="footer__container">
+   <button
+       className="arrow-link"
+       onClick={() => scrollToSection(aboutRef)}
+   >
+       <div className="arrow">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="Panel__arrow"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 12l-4-4h8l-4 4z" fill="#ffffff"></path></svg>
+       </div>
+   </button>
+</div>
 
-      <div class= "footer__container">
-      <div onClick={() => scrollToSection(aboutRef)} className="arrow-link">
-        <div className="arrow">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="Panel__arrow"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 12l-4-4h8l-4 4z" fill="#ffffff"></path></svg>
-        </div>
-      </div>
-      </div>
+
+
+{/* <div class="Panel-footer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="Panel__arrow"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 12l-4-4h8l-4 4z" fill="currentColor"></path></svg></div> */}
 
      
         <div className="night">
