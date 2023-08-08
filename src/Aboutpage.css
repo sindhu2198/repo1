@@ -1,35 +1,60 @@
 .about-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 100vh;  /* take up full height of the viewport */
+  height: 100vh;
   box-sizing: border-box;
 }
 
 .about-content {
-    align-items: center;
-    box-sizing: content-box;
-    display: grid;
-    margin: 0 12vw;
-    min-height: calc(80vh - 3.5rem - 4px);
-    padding-top: calc(3.5rem + 4px);
+  display: flex;
+  flex-direction: row; /* Set the flex direction to row */
+  justify-content: space-between; /* Align content with space between */
+  margin-top: 0px;
+  padding-top: 0px;
+  min-height: calc(80vh - 3.5rem - 4px);
+  position: relative;
+}
+
+.about-content__heading {
+  font-size: calc(2.5rem + 1.18919vw - 3.56757px);
+  font-family: Merriweather Sans, sans-serif;
+  font-weight: 800;
+  color: white;
+  margin-top: 50px;
+  margin-left: 0px;
+}
+
+.profile-image {
+  margin-left: auto; /* Push to the extreme right */
+  position: relative;
+  top: -380px; /* Adjust as needed */
 }
 
 .profile-image img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+  border-radius: 20%;
   object-fit: cover;
-  margin-top: 20px;
 }
 
+
 .description {
-  flex: 1;
+  display: flex;
+  flex-direction: column; /* Set the flex direction to column */
   text-align: left;
-  max-width: 400px;
+  max-width: 68%;
+  align-items: flex-start; /* Align content to the start */
+  color: white;
+  font-family: "Exo\ 2",sans-serif;
+  font-weight: 400;
+  opacity: .87;
+  white-space: pre-wrap;
+  font-size: calc(1em + .37838vw - 1.13514px);
+  line-height: calc(1.4em + .00811vw - .02432px);
+
 }
+
 
 
 .footer__container {
@@ -37,14 +62,14 @@
   justify-content: center;
   align-items: center;
   width: 100%; /* adjust as needed */
-  height: 25vh; /* adjust as needed */
+  height: 30vh; /* adjust as needed */
 }
 
 .arrow-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 9%; /* adjust as needed */
+  width: 7%; /* adjust as needed */
   height: auto; /* adjust as needed */
   background-color: transparent; /* adjust as needed */
 }
@@ -52,4 +77,16 @@
 .arrow {
   width: 100%;
   height: 100%;
+}
+
+
+.h1{
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }

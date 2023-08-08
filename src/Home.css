@@ -1,111 +1,112 @@
-
 .App {
-    text-align: center;
-    font: 16px
-  }
-  
-  
-  
-  body {
-    font-family: 'Merriweather Sans', sans-serif;
-    font: 16px
-  }
-  
-
- 
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    margin-left: 32px;
-    font-family: 'Merriweather Sans', sans-serif;
-    
-  }
-  
-  .logo {
-    font-size: 4px;
-    font-weight: bold;
-    letter-spacing: 0.2px;
-    color: #ffffff;
-    font-family: 'Merriweather Sans', sans-serif;
-    text-align: start;
-    box-sizing: border-box;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  
-  .nav-list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-    font-family: 'Merriweather Sans', sans-serif;
-  }
-  
-  .nav-list li {
-    margin-right: 32px;
-  }
-  
-  .nav-button {
-    background-color: transparent;
-    color: #ffffff;
-    border: none;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
-    padding-bottom: 5px;
-    transition: color 0.3s ease;
-    font-family: 'Merriweather Sans', sans-serif;
-  }
-
-  .nav-button::before {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background-color: rgb(0, 0, 0);
-    transform: translateX(-50%);
-    transition: all 0.3s ease;
-  }
-  
-  .nav-button:hover::before {
-    width: 10px;
-    height: 10px;
-  }
-
-  .nav-button:hover {
-    color: #ffffff;
-    font-size: 24px;
-  }
-    
- 
-  
-  
-  .content {
-    align-items: center;
-    box-sizing: content-box;
-    display: grid;
-    margin: 0 12vw;
-    min-height: calc(80vh - 3.5rem - 4px);
-    padding-top: calc(3.5rem + 4px);
+  text-align: center;
+  font: 16px
 }
 
+
+
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  font: 16px
+}
+
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  margin-left: 32px;
+  font-family: 'Merriweather Sans', sans-serif;
+  
+}
+
+.logo {
+  font-size: 4px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  font-family: 'Merriweather Sans', sans-serif;
+  text-align: start;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.nav-list li {
+  margin-right: 32px;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.nav-button::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover::before {
+  width: 10px;
+  height: 10px;
+}
+
+.nav-button:hover {
+  color: #ffffff;
+  font-size: 24px;
+}
+  
+
+
+
+.content {
+  align-items: center;
+  box-sizing: content-box;
+  display: grid;
+  margin-top: 0px;
+  margin-right: 12vw;
+  margin-bottom: 0px;
+  margin-left: 12vw;
+  min-height: calc(80vh - 3.5rem - 4px);
+  padding-top: calc(3.5rem + 4px);
+}
   
   .splash-container {
     position: fixed;
@@ -684,12 +685,15 @@ body {
 
 .Name__content {
   display: flex;
-  font-family: Merriweather Sans,sans-serif;
+  font-family: Merriweather Sans, sans-serif;
   font-size: 7vw;
   font-weight: 700;
   justify-content: center;
   line-height: 1;
-  padding-top: 0.275em;
+  padding-top: 0.1em; /* Reduced padding */
+  padding-left: 2em; /* Additional reduced padding */
+  padding-right: 2em; /* Additional reduced padding */
+  padding-bottom: 0.1em; /* Additional reduced padding */
   text-align: center;
   color: #ffffff;
 }
