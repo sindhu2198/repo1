@@ -1,0 +1,36 @@
+.content-container {
+    display: flex;
+    width: 100%;
+    background-color: black;
+}
+
+.image-container {
+    flex: 1;
+    padding: 10px;
+    background-color: black;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.table-container {
+    flex: 1;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ad6060;
+}
+
+th {
+    background-color: #4d2d2d;
+}

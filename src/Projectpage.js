@@ -3,21 +3,29 @@ import "./Projectpage.css";
 import propic from "./AllImages/ratanpropic.jpg";
 import "./Home.css"
 import arrow from "./AllImages/right-arrow.png"
+import yoga from "./AllImages/pdfDiyo-banner.png"
+import ranker from "./AllImages/ranker-banner.png"
+import cowsandbulls from "./AllImages/cowsandbulls.png";
+import { Link } from 'react-router-dom';
+import ProjectHighlights1 from "./ProjectHighlights_1";
+import ProjectHighlights_1 from "./ProjectHighlights_1";
 
 function Projectpage({ timelineRef, scrollToSection }) {
     const [scrollIndex, setScrollIndex] = useState(0);
   
     function showMoreProjects() {
-      const scrollContainer = document.querySelector('.project-scroll-container');
-      const maxScrollIndex = 2; // We have 3 additional hidden projects
-  
-      const newScrollIndex = scrollIndex + 1 > maxScrollIndex ? 0 : scrollIndex + 1;
-  
-      const scrollAmount = 1085; // Card width plus margin (300px + 10px + 10px)
-      scrollContainer.scrollLeft = newScrollIndex * scrollAmount;
-  
-      setScrollIndex(newScrollIndex);
-    }
+        const scrollContainer = document.querySelector('.project-scroll-container');
+        const scrollAmount = 960; // Card width plus margin (300px + 10px + 10px)
+    
+        // Toggle between 0 and 1 for scrollIndex
+        const newScrollIndex = scrollIndex === 0 ? 1 : 0;
+    
+        // Scroll to the appropriate position based on scrollIndex
+        scrollContainer.scrollLeft = newScrollIndex * scrollAmount;
+    
+        // Update the state
+        setScrollIndex(newScrollIndex);
+      }
   return (
     <div id="about" className="about-container">  
       <div className="content">
@@ -25,40 +33,66 @@ function Projectpage({ timelineRef, scrollToSection }) {
       <div class="projects-container">
       <div class="project-scroll-container">
   <div class="project-card">
-    <img src="path/to/project1/image.jpg" alt="Project 1" />
+    
+    <img src={yoga} alt="Project 1" />
     <h3>Project Title 1</h3>
-    <p>Project Description 1</p>
-    <a href="link/to/project1" target="_blank">View Project</a>
+    <div class="card-body">
+    <p>A knowledge bank in the page of single page application built on Angular JS framework</p>
+    </div>
+    <div class="card-footer">
+    <Link to="/project1">View Project</Link>
+    </div>
   </div>
+
   <div class="project-card">
-    <img src="path/to/project2/image.jpg" alt="Project 2" />
+    <img src={ranker} alt="Project 2" />
     <h3>Project Title 2</h3>
-    <p>Project Description 2</p>
+    <div class="card-body">
+    <p>Database management system project implemented using MySQL</p>
+    </div>
+    <div class="card-footer">
     <a href="link/to/project2" target="_blank">View Project</a>
+    </div>
   </div>
   <div class="project-card">
-    <img src="path/to/project3/imag3.jpg" alt="Project 3" />
+    <img src={cowsandbulls} alt="Project 3" />
     <h3>Project Title 3</h3>
-    <p>Project Description 3</p>
-    <a href="link/to/project3" target="_blank">View Project</a>
+    <div class="card-body">
+    <p>A codebreaking Android game that is developed using Java</p>
+    </div>
+    <div class="card-footer">
+    <a href="link/to/project2" target="_blank">View Project</a>
+    </div>
   </div>
   <div class="project-card hidden">
   <img src="path/to/project4/imag4.jpg" alt="Project 4" />
     <h3>Project Title 4</h3>
-    <p>Project Description 4</p>
-    <a href="link/to/project4" target="_blank">View Project</a>
+    <div class="card-body">
+    <p>A knowledge bank in the page of single page application built on Angular JS framework</p>
+    </div>
+    <div class="card-footer">
+    <a href="link/to/project2" target="_blank">View Project</a>
+    </div>
   </div>
   <div class="project-card hidden">
   <img src="path/to/project5/imag5.jpg" alt="Project 5" />
     <h3>Project Title 5</h3>
-    <p>Project Description 5</p>
-    <a href="link/to/project5" target="_blank">View Project</a>
+    <div class="card-body">
+    <p>A knowledge bank in the page of single page application built on Angular JS framework</p>
+    </div>
+    <div class="card-footer">
+    <a href="link/to/project2" target="_blank">View Project</a>
+    </div>
   </div>
   <div class="project-card hidden">
   <img src="path/to/project6/imag6.jpg" alt="Project 6" />
     <h3>Project Title 6</h3>
-    <p>Project Description 6</p>
-    <a href="link/to/project6" target="_blank">View Project</a>
+    <div class="card-body">
+    <p>A knowledge bank in the page of single page application built on Angular JS framework</p>
+    </div>
+    <div class="card-footer">
+    <a href="link/to/project2" target="_blank">View Project</a>
+    </div>
   </div>
   </div>
   <button id="show-more-btn" onClick={showMoreProjects}>

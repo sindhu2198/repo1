@@ -7,8 +7,7 @@
   .project-scroll-container {
     display: flex;
     overflow-x: auto; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevents wrapping on the next line */
-    width: 1080px; /* Width of three cards plus their margins */  
+    width: 960px; /* Width of three cards plus their margins */  
     -ms-overflow-style: none; /* Internet Explorer and Edge */
     scrollbar-width: none; /* Firefox */
   }
@@ -19,26 +18,70 @@
   
   .project-card {
     flex: 0 0 auto;
-    width: 295px;
+    width: 300px;
     border: 1px solid #000;
-    padding: 20px;
     margin: 10px;
     background-color: #000;
     color: #fff;
     text-align: center;
-    height: 330px;
-    display: inline-block; /* To line up the cards horizontally */
+    height: 350px; /* You may need to adjust this */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Add this line to hide overflow */
   }
   
+  .card-body {
+   
+    line-height: calc(1.3em + .00811vw - .02432px);
+    flex: 1 1 auto;
+    overflow: hidden; /* If the content inside card-body is large, it can be scrolled */
+  }
+  
+  .card-footer {
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.125);
+    padding: 0.2rem;
+  }
+  
+  .project-card h3 {
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .project-card p {
+    
+    margin: 8px 0; /* Add some margin */
+    word-wrap: break-word; /* Break the words */
+    max-height: 150px; /* Max height for the description */
+    padding: 10px;
+    text-align: justify; /* Aligns the text */
+    line-height: 1.5; /* Adjusts the space between lines */
+  }
+  
+  .project-card a {
+    display: inline-block;
+    background-color: #5c5e5c; /* Green background color */
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
   .project-card img {
     max-width: 100%;
-    height: auto;
+    flex: 0 0 auto;
+    height: 120px;
+    width: 300px;
   }
   
   #show-more-btn {
     position: absolute;
     bottom: 150px;
-    right: 5px;
+    right: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,7 +100,7 @@
     height: auto;
     filter: invert(100%);
   }
-  
+
   @media (max-width: 768px) {
     .projects-container {
       flex-direction: column;
