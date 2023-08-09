@@ -101,9 +101,9 @@ body {
   box-sizing: content-box;
   display: grid;
   margin-top: 0px;
-  margin-right: 12vw;
+  margin-right: 10vw;
   margin-bottom: 0px;
-  margin-left: 12vw;
+  margin-left: 10vw;
   min-height: calc(80vh - 3.5rem - 4px);
   padding-top: calc(3.5rem + 4px);
 }

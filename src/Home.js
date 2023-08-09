@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Welcome from "./Welcome";
 import { ReactComponent as Logo } from "./AllImages/home2.svg";
 import Aboutpage from "./Aboutpage";
-
+import Projectpage from "./Projectpage";
 
 function Home() {
   const aboutRef = useRef(null);
@@ -210,7 +210,10 @@ function Home() {
         <div ref={aboutRef}>
         <Aboutpage />
       </div>
-   
+
+      <div ref={projectRef}>
+        <Projectpage />
+      </div>
   
        
 
