@@ -208,7 +208,7 @@ function Home() {
         
 
         <div ref={aboutRef}>
-        <Aboutpage />
+        <Aboutpage projectRef={projectRef} scrollToSection={scrollToSection} />
       </div>
 
       <div ref={projectRef}>

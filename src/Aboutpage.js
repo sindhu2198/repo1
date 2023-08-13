@@ -1,9 +1,11 @@
 import React from "react";
 import "./Aboutpage.css";
 import propic from "./AllImages/ratanpropic.jpg";
-import "./Home.css"
+import "./Home.css";
+import "./Projectpage";
 
 function Aboutpage({ projectRef, scrollToSection }) {
+
   return (
     <div id="about" className="about-container">  
       <div className="content">
