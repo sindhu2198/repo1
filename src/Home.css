@@ -107,6 +107,7 @@ body {
   min-height: calc(80vh - 3.5rem - 4px);
   padding-top: calc(3.5rem + 4px);
 }
+
   
   .splash-container {
     position: fixed;

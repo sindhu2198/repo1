@@ -6,6 +6,7 @@ import Welcome from "./Welcome";
 import { ReactComponent as Logo } from "./AllImages/home2.svg";
 import Aboutpage from "./Aboutpage";
 import Projectpage from "./Projectpage";
+import Timelinepage from "./Timelinepage";
 
 function Home() {
   const aboutRef = useRef(null);
@@ -212,11 +213,12 @@ function Home() {
       </div>
 
       <div ref={projectRef}>
-        <Projectpage />
+        <Projectpage timelineRef={timelineRef} scrollToSection={scrollToSection} />
       </div>
-  
-       
-
+      <div ref={timelineRef}>
+        <Timelinepage />
+      </div>
+      
 
       
     </div>

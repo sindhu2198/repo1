@@ -1,110 +1,122 @@
 .projects-container {
-    width: 100%;
-    position: relative;
-    overflow: hidden; /* Hide the overflow */
-  }
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  align-items: start;
+
+  display: flex;
+  gap:20px;
+  align-items: center;
+}
+
+.project-scroll-container {
+  align-items: start;
+  gap:20px;
+  transition: scrollLeft 2s ease;
+  display: flex;
+  overflow-x: auto;
+  width: calc((20vw * 3) + (20px * 2));
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.project-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.project-card {
+  flex: 0 0 auto;
+  width: calc(20vw);
+  min-width: 300px;
+  max-width: 550px;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  height: 350px; /* You may need to adjust this */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Add this line to hide overflow */
+}
+
+.card-body {
+ 
+  line-height: calc(1.3em + .00811vw - .02432px);
+  flex: 1 1 auto;
+  overflow: hidden; /* If the content inside card-body is large, it can be scrolled */
+}
+
+.card-footer {
+  background-color: rgba(0,0,0,.03);
+  border-top: 1px solid rgba(0,0,0,.125);
+  padding: 0.2rem;
+}
+
+.project-card h3 {
+  padding: 10px;
+  text-align: left;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.project-card p {
   
+  margin: 8px 0; /* Add some margin */
+  word-wrap: break-word; /* Break the words */
+  max-height: 150px; /* Max height for the description */
+  padding: 10px;
+  text-align: justify; /* Aligns the text */
+  line-height: 1.5; /* Adjusts the space between lines */
+}
+
+.project-card a {
+  display: inline-block;
+  background-color: #5c5e5c; /* Green background color */
+  color: white;
+  padding: 10px 20px;
+  margin: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.project-card img {
+  max-width: 100%;
+  flex: 0 0 auto;
+  height: 120px;
+  width: 300px;
+}
+
+
+#show-more-btn {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: #c6b4b4;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#show-more-btn img {
+  width: 100%;
+  height: auto;
+  filter: invert(100%);
+}
+
+@media (max-width: 768px) {
+
+
   .project-scroll-container {
-    display: flex;
-    overflow-x: auto; /* Enable horizontal scrolling */
-    width: 960px; /* Width of three cards plus their margins */  
-    -ms-overflow-style: none; /* Internet Explorer and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-  
-  .project-scroll-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, and Opera */
-  }
-  
-  .project-card {
-    flex: 0 0 auto;
-    width: 300px;
-    border: 1px solid #000;
-    margin: 10px;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    height: 350px; /* You may need to adjust this */
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; /* Add this line to hide overflow */
-  }
-  
-  .card-body {
-   
-    line-height: calc(1.3em + .00811vw - .02432px);
-    flex: 1 1 auto;
-    overflow: hidden; /* If the content inside card-body is large, it can be scrolled */
-  }
-  
-  .card-footer {
-    background-color: rgba(0,0,0,.03);
-    border-top: 1px solid rgba(0,0,0,.125);
-    padding: 0.2rem;
-  }
-  
-  .project-card h3 {
-    padding: 10px;
-    text-align: left;
-    font-size: 20px;
-    margin: 10px 0;
-  }
-  
-  .project-card p {
-    
-    margin: 8px 0; /* Add some margin */
-    word-wrap: break-word; /* Break the words */
-    max-height: 150px; /* Max height for the description */
-    padding: 10px;
-    text-align: justify; /* Aligns the text */
-    line-height: 1.5; /* Adjusts the space between lines */
-  }
-  
-  .project-card a {
-    display: inline-block;
-    background-color: #5c5e5c; /* Green background color */
-    color: white;
-    padding: 10px 20px;
-    margin: 10px 0;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  .project-card img {
-    max-width: 100%;
-    flex: 0 0 auto;
-    height: 120px;
-    width: 300px;
-  }
-  
-  #show-more-btn {
-    position: absolute;
-    bottom: 150px;
-    right: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    color: #c6b4b4;
-    border: none;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  #show-more-btn img {
-    width: 100%;
-    height: auto;
-    filter: invert(100%);
+    width: 90vw; /* Adjusting width for mobile views */
   }
 
-  @media (max-width: 768px) {
-    .projects-container {
-      flex-direction: column;
-      align-items: center;
-    }
+  .project-card {
+    width: calc((90vw - 40px) / 3); /* Adjusting card width for mobile views, subtracting the left and right margin */
   }
-  
+}
