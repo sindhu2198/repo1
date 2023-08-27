@@ -10,7 +10,7 @@
   
 
   .timeline-container {
-    position: absolute;
+   
     margin-top: auto;
 }
 
@@ -27,7 +27,7 @@
 .Timeline-container:before {
   background-color: #fff;
   content: "";
-  height: 50%;
+  height: 30%;
   left: 50%;
   position: absolute;
   width: 4px;
@@ -252,4 +252,7 @@ div p {
 }
 .Timeline-card__description {
   font-family: 'Roboto', sans-serif;
+}
+.Timeline-container.last-card:before {
+  display: none;
 }

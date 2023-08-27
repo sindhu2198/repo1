@@ -700,6 +700,7 @@ body {
 }
 
 .footer__container {
+  clear: both;
   display: grid;
   height: 25vh;
   place-items: center;

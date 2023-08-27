@@ -215,8 +215,8 @@ function Home() {
       <div ref={projectRef}>
         <Projectpage timelineRef={timelineRef} scrollToSection={scrollToSection} />
       </div>
-      <div ref={timelineRef}>
-        <Timelinepage />
+      <div ref={contactRef}>
+        <Timelinepage contactRef={contactRef}  scrollToSection={scrollToSection} />
       </div>
       
 
