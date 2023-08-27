@@ -33,8 +33,10 @@
 .Timeline {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas: "card date";
   position: relative;
 }
+
 
 
 
@@ -52,9 +54,15 @@
 
 
 .Timeline-card--left {
-  grid-column-start: 1;
-  margin: 0 5vw 0 7vw;
+  grid-area: card;
+  margin-right: 5vw;
 }
+
+.Timeline-card--right {
+  grid-area: card;
+  margin-left: 5vw;
+}
+
 
 .Timeline-card {
   background: #343a40;
@@ -131,12 +139,15 @@ text-center {
     font-size: .6em;
     justify-content: space-between;
     padding: 0.384em 0.769em;
+    margin-bottom: 10px;
+    font-size: 0.9em;
 }
 
 .Timeline-card__description {
   font-size: .8em;
   margin: 1em 0;
   white-space: pre-wrap;
+  margin-bottom: 10px;
 }
 
 
@@ -202,4 +213,6 @@ text-center {
 }
 
 
-
+.Timeline-card__list-item {
+  margin-right: 10px;
+}
