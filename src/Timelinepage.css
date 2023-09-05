@@ -10,8 +10,9 @@
   
 
   .timeline-container {
-   
-    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
 }
 
 
@@ -27,11 +28,12 @@
 .Timeline-container:before {
   background-color: #fff;
   content: "";
-  height: 30%;
   left: 50%;
   position: absolute;
-  width: 4px;
+  width: 2px;
+  height: auto;  /* Change this line */
 }
+
 
 .Timeline {
   display: grid;
@@ -44,6 +46,7 @@
 
 
   .Timeline:before {
+    
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 0 0 0 5px #fff, inset 0 2px 0 rgb(0 0 0/8%), 0 3px 0 4px rgb(0 0 0/5%);
@@ -59,11 +62,13 @@
 .Timeline-card--left {
   grid-area: card;
   margin-right: 5vw;
+  margin-bottom: 120px;
 }
 
 .Timeline-card--right {
   grid-area: card;
   margin-left: 5vw;
+  margin-bottom: 120px;
 }
 
 
@@ -74,17 +79,22 @@
   color: #fff;
   cursor: pointer;
   grid-column-start: 1;
-  margin: 0 7vw 0 5vw;
-  padding: 1.05em;
+  margin-top: 10px;
+  padding: 10px;
+  margin-bottom: 120px;
+  /* margin: 0 7vw 0 5vw; */
+  /* padding: 1.05em; */
   position: relative;
 
 }
 
 .Timeline-card__heading {
+  padding: 5px;
   font-size: 1.5pc;
   font-family: Merriweather Sans, sans-serif;
   font-weight: 500;
   line-height: 1em;
+  margin-bottom: 20px;
 }
 text-center {
   text-align: center!important;
@@ -255,4 +265,30 @@ div p {
 }
 .Timeline-container.last-card:before {
   display: none;
+  height: 0px;
+}
+
+
+
+.timeline-wrapper::before {
+  margin-top: 0px;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: grey;
+  z-index: -1;
+}
+.timeline-wrapper {
+  position: relative;
+  
+  padding-bottom: 30px;
+}
+
+
+.Timeline-card:first-child {
+  margin-top: 0; /* or any other value to set the gap to your preference */
+  margin-bottom: 40px;
 }
