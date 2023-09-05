@@ -4,6 +4,7 @@ import { ToastContainer } from "react-toastify";
 import Home from './Home.js';
 import Aboutpage from "./Aboutpage.js";
 import ProjectHighlights_1 from './ProjectHighlights_1.js';
+import Resumepage from './Resumepage.js';
 
 function Routing() {
   return (
@@ -13,6 +14,7 @@ function Routing() {
         <Route path="/" element={< Home />} />
         <Route path="/about" component={Aboutpage} />
         <Route path="/project1" element={<ProjectHighlights_1 />} />
+        <Route path="/resume" component={Resumepage} />
         </Routes>
       </BrowserRouter>
     

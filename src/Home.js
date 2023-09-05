@@ -8,6 +8,7 @@ import Aboutpage from "./Aboutpage";
 import Projectpage from "./Projectpage";
 import Timelinepage from "./Timelinepage";
 import Contactpage from "./Contactpage";
+import Resumepage from "./Resumepage";
 
 function Home() {
   const aboutRef = useRef(null);
@@ -15,6 +16,7 @@ function Home() {
   const projectRef = useRef(null);
   const timelineRef = useRef(null);
   const resumeRef = useRef(null);
+
   const [activeNav, setActiveNav] = useState(null);
   const [navVisible, setNavVisible] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false); 
@@ -22,10 +24,29 @@ function Home() {
   const [showWelcome, setShowWelcome] = useState(false);
   const [showCardSlider, setShowCardSlider] = useState(false);
   const duration = 2;
+  const [shouldOpenResume, setShouldOpenResume] = useState(false);
 
   const handleNavigation = (ref) => {
-    ref.current.scrollIntoView({ behavior: "smooth" });
+    console.log(ref);
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.warn("Ref is not yet available");
+    }
   };
+
+  const handleNavigationresume = (navRef, name) => {
+    if (name === "resume") {
+      setShouldOpenResume(true);
+    } else {
+      setShouldOpenResume(false); // Reset to false for other navigation items
+      if (navRef && navRef.current) {
+        navRef.current.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
+  
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
@@ -142,9 +163,9 @@ function Home() {
               <li>
                 <button
                   className={`nav-button ${
-                    activeNav === "contact" ? "active" : ""
+                    activeNav === "resume" ? "active" : ""
                   }`}
-                  onClick={() => handleNavigation(resumeRef)}
+                  onClick={() => handleNavigationresume(resumeRef,"resume")}
                   onMouseEnter={() => handleHover("resume")}
                   onMouseLeave={handleHoverOut}
                 >
@@ -223,7 +244,10 @@ function Home() {
       <div ref={contactRef}>
         <Contactpage contactRef={contactRef}  scrollToSection={scrollToSection} />
       </div>
-      
+      <div ref={resumeRef}>
+      <Resumepage shouldOpen={shouldOpenResume} />
+    </div>
+
 
       
     </div>
