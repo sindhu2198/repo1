@@ -1,36 +1,149 @@
 .content-container {
-    display: flex;
+    display: block;
     width: 100%;
-    background-color: black;
+  
 }
 
 .image-container {
-    flex: 1;
-    padding: 10px;
-    background-color: black;
+  display: flex;       /* Flexbox will help stretch the child elements */
+  align-items: center; /* Center the image vertically */
+  justify-content: center; /* Center the image horizontally */
+  height: 50vh;       /* Assuming you want it to take half the viewport height */
+  padding: 0;
+  overflow: hidden;   /* This will hide any overflowed content */
 }
 
 .image-container img {
-    width: 100%;
-    height: auto;
+  width: 100%;        /* The image will take the full width of its container */
+  height: auto;       /* This will keep the aspect ratio intact */
+  display: block;     /* Removes any default margin/padding */
+  margin: 0 auto;     /* Centers the image horizontally */
 }
+
+/* Other styles remain the same */
 
 .table-container {
-    flex: 1;
-    padding: 10px;
+  display: flex;             /* Make this a flex container */
+  justify-content: center;   /* Center children horizontally */
+  align-items: center;       /* Center children vertically */
+  padding-top: 0px;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  height: calc(100vh - 50vh); /* Take the remaining viewport height minus the image height */
 }
 
+
+.card-header {
+  background-color: #72767a;
+  color: #000;  /* Adjust for better contrast if needed */
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ad6060;  /* Add a border to separate from table */
+}
+
+/* Adjusted the order of th styles to make the headers look more like the card header */
+th {
+  padding: 8px;
+  font-weight: normal;
+  text-align: left;
+  border-bottom: 1px solid #ad6060;
+  background-color: #f3f4f6;  /* Light gray for headers */
+}
+
+.project_hcard {
+  flex: 1;
+  width: 90%;  /* Adjust as required */
+  max-width: 700px;  /* Maximum width for the card */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-color: white;
+  border-radius: 8px;  /* Rounded edges */
+  overflow: hidden;  /* Makes sure child elements do not break the rounded corners */
+  height: 80%;
+}
+
+
+
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ad6060;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ad6060;
 }
 
-th {
-    background-color: #4d2d2d;
+
+
+body.project-highlights-body {
+  font-family: 'Roboto', sans-serif;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+  display: block;
+  font-family: "Anton", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.navigation {
+  display: flex;
+  justify-content: space-between; /* Distributes items evenly */
+  align-items: center;
+  padding: 10px;
+  position: absolute; /* To place it over the image */
+  width: 100%;
+  top: 0;
+}
+
+
+
+.navigation .back-button {
+  background: none;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.navigation .projects-dropdown {
+  background: none;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  padding-right: 40px;
+  padding-top: 10px;
+}
+
+.projects-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #191a1c;
+  max-width: 500px;
+  color: #FFF;
+  padding: 0;  /* Removed the padding to ensure full width is used for wrapping */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  
+}
+
+.projects-dropdown:hover .projects-dropdown-content {
+  display: block;
+  text-decoration: none;
+
+}
+
+
+.projects-dropdown-content a {
+  display: block;  /* This will force each <a> to its own line */
+ 
+  color: #f0efef;
+  text-decoration: none;
+  padding-right: 50px; /* Add some padding for better appearance when hovering */
+  padding-bottom: 10px;
+
+ 
+}
+.projects-dropdown-content a:hover {
+  text-decoration: underline;
 }

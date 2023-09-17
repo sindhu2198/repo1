@@ -69,7 +69,13 @@ function Home() {
   const handleWelcomeAnimationEnd = () => {
     setShowWelcome(false);
   };
+  useEffect(() => {
+    if (window.location.hash === '#projects' && projectRef.current) {
+        projectRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+}, [window.location.hash]);
 
+  
   useEffect(() => {
     const shootingStars = document.querySelectorAll('.shooting_star');
 
@@ -234,7 +240,7 @@ function Home() {
         <div ref={aboutRef}>
         <Aboutpage projectRef={projectRef} scrollToSection={scrollToSection} />
       </div>
-
+     
       <div ref={projectRef}>
         <Projectpage timelineRef={timelineRef} scrollToSection={scrollToSection} />
       </div>
