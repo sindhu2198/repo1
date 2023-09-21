@@ -200,7 +200,7 @@ function Home() {
             
             <div class="Name__Container ">
               <div class="ContentTitle--one">
-            <div class="Name__content">Ratan Tejaswi</div>
+            <div class="Name__content">Durga Sindhu</div>
             </div>
  
           </div>

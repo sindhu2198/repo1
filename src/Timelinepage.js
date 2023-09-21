@@ -17,15 +17,15 @@ function Timelinepage({ contactRef, scrollToSection }) {
 
     const data = [
         { 
-            company: "Indiana University Bloomington", 
+            company: "Masters in Data Science", 
             year: "2022-Present",
-            university: "Some University, City",
-            dateRange: "Start Date - End Date",
-            description: "Description for Indiana University Bloomington.",
+            university: "Indiana University, Bloomington",
+            dateRange: "2022-Present",
+            description: "Pusuing masters in Data Science Program at Indiana University, Bloomington",
             techTools: ["Tech/Tool 1", "Tech/Tool 2", "Tech/Tool 3"]
         },
         { 
-            company: "Project1", 
+            company: "Employee Management System", 
             year: "",
             university: "Another University, Another City",
             dateRange: "Another Start Date - Another End Date",
@@ -33,7 +33,7 @@ function Timelinepage({ contactRef, scrollToSection }) {
             techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
         },
         { 
-            company: "Project2", 
+            company: "Sentimental Analysis", 
             year: "",
             university: "Another University2, Another City 2",
             dateRange: "Another Start Date - Another End Date",
@@ -41,8 +41,8 @@ function Timelinepage({ contactRef, scrollToSection }) {
             techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
         },
         { 
-            company: "Project3", 
-            year: "2020",
+            company: "Power BI Project", 
+            year: "",
             university: "Another University2, Another City 2",
             dateRange: "Another Start Date - Another End Date",
             description: "Description for Deloitte.",
@@ -57,11 +57,11 @@ function Timelinepage({ contactRef, scrollToSection }) {
             techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
         },
         { 
-            company: "Project5", 
+            company: "Deloitee", 
             year: "",
             university: "Another University2, Another City 2",
             dateRange: "Another Start Date - Another End Date",
-            description: "Description for Deloitte.",
+            description: "Worked as a full stack developer and  after successfully delivering multiple front-end and backend solutions to satisfy business requirements. Day-to-day tasks include developing front-end apps, providing estimations, collaborating with team and supporting the existing projects. Check out my resume for project specific details!",
             techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
         },
         { 

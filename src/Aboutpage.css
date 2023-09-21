@@ -25,10 +25,16 @@
   margin-left: 0px;
 }
 
-.profile-image {
-  margin-left: auto; /* Push to the extreme right */
+@media (min-width: 769px)
+{.profile-image {
+  margin-left: auto; 
   position: relative;
-  top: -380px; /* Adjust as needed */
+  top: -270px; 
+  max-width: 25vw;
+  order: 2;
+  padding: 0;
+
+}
 }
 
 .profile-image img {
@@ -43,7 +49,7 @@
   display: flex;
   flex-direction: column; /* Set the flex direction to column */
   text-align: left;
-  max-width: 68%;
+  max-width: 65%;
   align-items: flex-start; /* Align content to the start */
   color: white;
   font-family: "Exo\ 2",sans-serif;
