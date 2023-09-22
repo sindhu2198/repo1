@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import "./Projectpage.css";
-import yoga from "./AllImages/pdfDiyo-banner.png";
+import yoga from "./AllImages/employee_prj.png";
 import ranker from "./AllImages/ranker-banner.png";
 import cowsandbulls from "./AllImages/cowsandbulls.png";
 import arrow from "./AllImages/right-arrow.png";
 import { Link } from 'react-router-dom';
 
 const projects = [
-  { src: yoga, title: 'Project Title 1', description: 'A knowledge bank in the page of a single page application built on Angular JS framework.' },
-  { src: ranker, title: 'Project Title 2', description: 'Database management system project implemented using MySQL.' },
-  { src: cowsandbulls, title: 'Project Title 3', description: 'A codebreaking Android game that is developed using Java.' },
-  { src: 'path/to/project4/imag4.jpg', title: 'Project Title 4', description: 'Description for project 4.' },
-  { src: 'path/to/project5/imag5.jpg', title: 'Project Title 5', description: 'Description for project 5.' },
+  { src: yoga, title: 'Skill Snapshot', description: 'A knowledge bank in the page of a single page application built on Angular JS framework.' },
+  { src: ranker, title: 'Reddit Deepfake Sentimental Analysis', description: 'Database management system project implemented using MySQL.' },
+  { src: cowsandbulls, title: 'Prediction of Flight Cancellation', description: 'A codebreaking Android game that is developed using Java.' },
+  { src: 'path/to/project4/imag4.jpg', title: 'HR Analytics using Power BI', description: 'Description for project 4.' },
+  { src: 'path/to/project5/imag5.jpg', title: 'UI Diet Planner Bot', description: 'Description for project 5.' },
   { src: 'path/to/project6/imag6.jpg', title: 'Project Title 6', description: 'Description for project 6.' }
 ];
 

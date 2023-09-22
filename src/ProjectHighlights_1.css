@@ -171,3 +171,7 @@ body.project-highlights-body {
 .blue-link:hover {
   color: blue !important;
 }
+.navigation .back-button:hover {
+ font-weight: bold;
+ 
+}
