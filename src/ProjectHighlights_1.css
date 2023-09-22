@@ -3,6 +3,15 @@
     width: 100%;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.triangle-down {
+  display: inline-block;
+  margin-left: 5px; /* Margin to separate it from the text */
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid white; /* Color of the triangle; match with text color */
+}
 
 .image-container {
   display: flex;       /* Flexbox will help stretch the child elements */
@@ -38,7 +47,7 @@
   font-size: 20px;
   padding: 10px;
   text-align: center;
-  border-bottom: 1px solid #ad6060;  /* Add a border to separate from table */
+  border-bottom: 1px solid #000000;  /* Add a border to separate from table */
   font-family: Merriweather Sans,sans-serif;
   font-weight: 800;
   font-style: italic;
@@ -49,7 +58,7 @@ th {
   padding: 8px;
   font-weight: normal;
   text-align: left;
-  border-bottom: 1px solid #ad6060;
+  border-bottom: 1px solid #000000;
   background-color: #f3f4f6;  /* Light gray for headers */
 }
 
@@ -123,10 +132,14 @@ body.project-highlights-body {
   display: none;
   position: absolute;
   background-color: #191a1c;
-  max-width: 500px;
+  /*max-width: 500px;*/
+   /*white-space: normal;
+  max-width: 900px; /* Maximum width with right gap */
+  right: 20px; /* Right gap */
   color: #FFF;
-  padding: 0;  /* Removed the padding to ensure full width is used for wrapping */
+  padding: 5PX;  /* Removed the padding to ensure full width is used for wrapping */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  
   
 }
 
@@ -139,7 +152,7 @@ body.project-highlights-body {
 
 .projects-dropdown-content a {
   display: block;  /* This will force each <a> to its own line */
- 
+  white-space: nowrap;
   color: #f0efef;
   text-decoration: none;
   padding-right: 50px; /* Add some padding for better appearance when hovering */

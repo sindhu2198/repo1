@@ -45,14 +45,15 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
             Back
         </button>
         <div className="projects-dropdown">
-          Projects
-          <div className="projects-dropdown-content">
-            <a href="/project1">Reddit Deepfake Sentimental Analysis</a>
-            <a href="/project2">Project 2</a>
-            <a href="/project3">Project 3</a>
-            {/* Add more project links as needed */}
-          </div>
-        </div>
+  Projects <span className="triangle-down"></span>
+  <div className="projects-dropdown-content">
+    <a href="/project1">Reddit Deep Sentimental Analysis</a>
+    <a href="/project2">Project 2</a>
+    <a href="/project3">Project 3</a>
+    {/* Add more project links as needed */}
+  </div>
+</div>
+
       </div>
             <div className="image-container">
                 <img src={yoga} alt="Your Image" />
