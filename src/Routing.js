@@ -9,14 +9,14 @@ import Resumepage from './Resumepage.js';
 function Routing() {
   return (
     
-      <BrowserRouter>
-        <Routes>
-        <Route path="/" element={< Home />} />
-        <Route path="/about" component={Aboutpage} />
-        <Route path="/project1" element={<ProjectHighlights_1 />} />
-        <Route path="/resume" component={Resumepage} />
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<Aboutpage />} />
+      <Route path="/project1" element={<ProjectHighlights_1 />} />
+      <Route path="/resume" element={<Resumepage />} />
+    </Routes>
+  </BrowserRouter>
     
   );
 }
