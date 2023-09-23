@@ -30,7 +30,7 @@ function Timelinepage({ contactRef, scrollToSection }) {
             university: "Project",
             dateRange: "April 2023-May 2023",
             description: "Developed a sophisticated web-based application utilizing React for the front-end and NodeJS for the backend, enhanced by intricate designs created with HTML and CSS. This application serves as a resource for managers and HR teams to monitor, evaluate, and track employee performance, growth, and milestones consistently. With an intuitive user interface, the application empowers managers to provide ratings, constructive feedback, and visualize performance trends over time through dynamic charts and graphs. Ensuring data integrity and security, all employee metrics and feedback are stored in a robust MySQL database, which also offers scalability for future feature integrations. Moreover, the application is designed to adapt seamlessly across devices, providing managers the flexibility to assess and give feedback on-the-go.",
-            techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
+            techTools: ["MySQL","ReactJs", "NodeJS","HTML", "CSS"]
         },
         { 
             company: "Network Analysis and Topic Modeling on Deepfake technology", 
@@ -38,7 +38,7 @@ function Timelinepage({ contactRef, scrollToSection }) {
             university: "Project",
             dateRange: "October 2022",
             description: "Delving into society's interaction with deepfakes, this project utilizes Network Analysis and Topic Modeling. Centered on Reddit discussions, it unveils prominent themes, debates potential advantages and drawbacks, and pinpoints influential contributors, presenting a holistic view of deepfakes' imprint on society.",
-            techTools: ["Python,PRAW, LDA, WordCloud, Network Analysis, Topic Modelling"]
+            techTools: ["Python","PRAW", "LDA", "WordCloud", "Network Analysis", "Topic Modelling"]
         },
         { 
             company: "Sentiments of users on wild animal welfare", 
@@ -46,7 +46,7 @@ function Timelinepage({ contactRef, scrollToSection }) {
             university: "Project",
             dateRange: "September 2022",
             description: "In this project, sentiment analysis was conducted to gauge public reaction to the Cincinnati Zoo gorilla incident, as discussed on Reddit. Utilizing the 'nltk' library for natural language processing, comments were preprocessed to eliminate common words, reducing noise and extracting meaningful patterns. The analysis categorized sentiments as positive, negative, or neutral, providing an insightful examination of prevailing attitudes and emotions expressed by the online community regarding the incident. This methodical approach ensured a comprehensive understanding of public sentiment during that time.",
-            techTools: ["Data extraction,VADER, EMPATH, Sentimental Analysis"]
+            techTools: ["Data extraction","VADER", "EMPATH", "Sentimental Analysis"]
         },
      
         { 
