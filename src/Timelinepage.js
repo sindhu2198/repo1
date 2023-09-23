@@ -18,100 +18,71 @@ function Timelinepage({ contactRef, scrollToSection }) {
     const data = [
         { 
             company: "Masters in Data Science", 
-            year: "2022-Present",
+            year: "2022-2024",
             university: "Indiana University, Bloomington",
             dateRange: "2022-Present",
             description: "Pusuing masters in Data Science Program at Indiana University, Bloomington",
-            techTools: ["Tech/Tool 1", "Tech/Tool 2", "Tech/Tool 3"]
+            techTools: ["Applied Algorithms","Advanced Database Technology", "Data Mining", "Introduction to Statistics", "Social Media Mining", "Search or Information Retrieval", "Advanced Database Concepts", "Security for Networked Systems", "Database management Systems"]
         },
         { 
             company: "Employee Management System", 
             year: "",
-            university: "Another University, Another City",
-            dateRange: "Another Start Date - Another End Date",
-            description: "Description for Deloitte.",
+            university: "Project",
+            dateRange: "April 2023-May 2023",
+            description: "Developed a sophisticated web-based application utilizing React for the front-end and NodeJS for the backend, enhanced by intricate designs created with HTML and CSS. This application serves as a resource for managers and HR teams to monitor, evaluate, and track employee performance, growth, and milestones consistently. With an intuitive user interface, the application empowers managers to provide ratings, constructive feedback, and visualize performance trends over time through dynamic charts and graphs. Ensuring data integrity and security, all employee metrics and feedback are stored in a robust MySQL database, which also offers scalability for future feature integrations. Moreover, the application is designed to adapt seamlessly across devices, providing managers the flexibility to assess and give feedback on-the-go.",
             techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
         },
         { 
-            company: "Sentimental Analysis", 
-            year: "",
-            university: "Another University2, Another City 2",
-            dateRange: "Another Start Date - Another End Date",
-            description: "Description for Deloitte.",
-            techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
+            company: "Network Analysis and Topic Modeling on Deepfake technology", 
+            year: "2022",
+            university: "Project",
+            dateRange: "October 2022",
+            description: "Delving into society's interaction with deepfakes, this project utilizes Network Analysis and Topic Modeling. Centered on Reddit discussions, it unveils prominent themes, debates potential advantages and drawbacks, and pinpoints influential contributors, presenting a holistic view of deepfakes' imprint on society.",
+            techTools: ["Python,PRAW, LDA, WordCloud, Network Analysis, Topic Modelling"]
         },
         { 
-            company: "Power BI Project", 
+            company: "Sentiments of users on wild animal welfare", 
             year: "",
-            university: "Another University2, Another City 2",
-            dateRange: "Another Start Date - Another End Date",
-            description: "Description for Deloitte.",
-            techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
+            university: "Project",
+            dateRange: "September 2022",
+            description: "In this project, sentiment analysis was conducted to gauge public reaction to the Cincinnati Zoo gorilla incident, as discussed on Reddit. Utilizing the 'nltk' library for natural language processing, comments were preprocessed to eliminate common words, reducing noise and extracting meaningful patterns. The analysis categorized sentiments as positive, negative, or neutral, providing an insightful examination of prevailing attitudes and emotions expressed by the online community regarding the incident. This methodical approach ensured a comprehensive understanding of public sentiment during that time.",
+            techTools: ["Data extraction,VADER, EMPATH, Sentimental Analysis"]
         },
+     
         { 
-            company: "Project4", 
-            year: "",
-            university: "Another University2, Another City 2",
-            dateRange: "Another Start Date - Another End Date",
-            description: "Description for Deloitte.",
-            techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
-        },
-        { 
-            company: "Deloitee", 
-            year: "",
-            university: "Another University2, Another City 2",
-            dateRange: "Another Start Date - Another End Date",
+            company: "Deloitte", 
+            year: "2020 - 2022",
+            university: "Company",
+            dateRange: "Aug 2020 - July 2022",
             description: "Worked as a full stack developer and  after successfully delivering multiple front-end and backend solutions to satisfy business requirements. Day-to-day tasks include developing front-end apps, providing estimations, collaborating with team and supporting the existing projects. Check out my resume for project specific details!",
-            techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
+            techTools: [" NodeJS", "AWS DynamoDB", "AWS Lambda", "MySQL", "QlikSense", "AWS CloudFormation", "AWS X-Ray",
+            "Unit testing","using Mocha", "Chai", "Istanbul", "Sinon" ,"Proxyquire"]
         },
         { 
-            company: "Project6", 
-            year: "",
-            university: "Another University2, Another City 2",
-            dateRange: "Another Start Date - Another End Date",
-            description: "Description for Deloitte.",
-            techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
+            company: "Deloitte, Intern", 
+            year: "2020",
+            university: "Company",
+            dateRange: "Jan 2020- June 2020",
+            description: "Worked as an intern at Deloitte, I contributed to the 'MyTechnology' website by crafting APIs and fixing bugs and had worked o backend technologies like C#, supported the QA team in reviewing test plans, and ensured over 75% code coverage through unit testing, collaborating extensively with cross-functional teams.",
+            techTools: ["HTML", "ASP.NET", "C#", "JavaScript"]
+        },
+       
+        { 
+            company: "HR Analytics using Power BI", 
+            year: "2019",
+            university: "Project",
+            dateRange: "November 2019",
+            description: "In this project, I utilized Power BI to create a comprehensive HR analytics dashboard that provides insights into the workforce's composition, performance, and retention. The dashboard consolidates diverse HR metrics into a single platform, enabling HR professionals to make informed decisions.",
+            techTools: ["PowerBi"]
         },
         { 
-            company: "Project7", 
-            year: "",
-            university: "Another University2, Another City 2",
-            dateRange: "Another Start Date - Another End Date",
-            description: "Description for Deloitte.",
-            techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
-        },
-        { 
-            company: "Project8", 
-            year: "",
-            university: "Another University2, Another City 2",
-            dateRange: "Another Start Date - Another End Date",
-            description: "Description for Deloitte.",
-            techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
-        },
-        { 
-            company: "Project9", 
-            year: "",
-            university: "Another University2, Another City 2",
-            dateRange: "Another Start Date - Another End Date",
-            description: "Description for Deloitte.",
-            techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
-        },
-        { 
-            company: "Project10", 
-            year: "",
-            university: "Another University2, Another City 2",
-            dateRange: "Another Start Date - Another End Date",
-            description: "Description for Deloitte.",
-            techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
-        },
-        { 
-            company: "Project11", 
-            year: "",
-            university: "Another University2, Another City 2",
-            dateRange: "Another Start Date - Another End Date",
-            description: "Description for Deloitte.",
-            techTools: ["Tech/Tool A", "Tech/Tool B", "Tech/Tool C"]
-        },
+            company: "Uipath Diet Planner bot", 
+            year: "2019",
+            university: "Project",
+            dateRange: " Oct 2019-Nov 2019",
+            description: "The UiPath Diet Planner Bot transformed the way users approach their nutrition, offering a personalized, interactive, and automated solution for meal planning. The automation not only saved users time but also ensured a more scientific and data-driven approach to dieting, enhancing user adherence and health outcomes.",
+            techTools: ["Uipath"]
+        }
     ];
 
     return (
@@ -153,6 +124,10 @@ function Timelinepage({ contactRef, scrollToSection }) {
                             {index === 0 && <div className="Timeline-date text-center">{data[0].year}</div>}
                             {index === 1 && <div className="Timeline-date text-center">{data[1].year}</div>}
                             {index === 3 && <div className="Timeline-date text-center">{data[3].year}</div>}
+                            {index === 4 && <div className="Timeline-date text-center">{data[4].year}</div>}
+                            {index === 5 && <div className="Timeline-date text-center">{data[5].year}</div>}
+                            {index === 6 && <div className="Timeline-date text-center">{data[6].year}</div>}
+                            {index === 7 && <div className="Timeline-date text-center">{data[7].year}</div>}
                             {/* Add more specific year displays as needed */}
                         </div>
                     </div>

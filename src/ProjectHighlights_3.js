@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import './ProjectHighlights_1.css';
-import yoga from "./AllImages/employee_prj.png";
+import deepfake from "./AllImages/deepfake.png";
 import { Link } from "react-router-dom";
 import { getDownloadURL, ref } from "firebase/storage";
 import { storage } from './firebaseConfig';
-const ProjectHighlights_1 = ({ shouldOpen }) => {
+const ProjectHighlights_3 = ({ shouldOpen }) => {
     const [project1Url, setproject1Url] = useState(null);
   
     useEffect(() => {
-      const project1Ref = ref(storage, 'gs://portfolio-299d7.appspot.com/ADT_FINAL_REPORT.pdf');
+      const project1Ref = ref(storage, 'gs://portfolio-299d7.appspot.com/SMM_final_prj-3.pdf');
   
       getDownloadURL(project1Ref)
         .then((url) => {
@@ -47,16 +47,18 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
         <div className="projects-dropdown">
   Projects <span className="triangle-down"></span>
   <div className="projects-dropdown-content">
-    <a href="/project1">Reddit Deep Sentimental Analysis</a>
-    <a href="/project2">Project 2</a>
-    <a href="/project3">Project 3</a>
+    <a href="/project1">Skill Snapshot</a>
+    <a href="/project2">Prediction of Flight Cancellation</a>
+    <a href="/project4">Project 4</a>
+    <a href="/project5">Project 5</a>
+    <a href="/project6">Project 6</a>
     {/* Add more project links as needed */}
   </div>
 </div>
 
       </div>
             <div className="image-container">
-                <img src={yoga} alt="Your Image" />
+                <img src={deepfake} alt="Your Image" />
             </div>
             <div className="table-container">
                 <div className="project_hcard">
@@ -67,17 +69,17 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
                         <thead>
                             <tr>
                                 <th>Project Name</th>
-                                <th>Skill Snapshot(An Employee Management System) </th>
+                                <th>Network Analysis and Topic Modeling on Deepfake technology</th>
                             </tr>
                         </thead>
                         <tbody>
                         <tr>
                                 <td>Tech Stack</td>
-                                <td>ReactJS, HTML, CSS, NodeJS, MySQL</td>
+                                <td> Python,PRAW, LDA, WordCloud, Network Analysis, Topic Modelling</td>
                             </tr>
                             <tr>
                                 <td>Time Duration</td>
-                                <td>20 days</td>
+                                <td>15 days</td>
                             </tr>
                             <tr>
                                 <td>Status</td>
@@ -85,7 +87,7 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
                             </tr>
                             <tr>
                                 <td>Github Link</td>
-                                <td> <a href="https://github.iu.edu/ravadap/ADT_ravadap_duanim_Pioneers/tree/render_new" 
+                                <td> <a href="https://github.iu.edu/duanim/SMM" 
        target="_blank" 
        rel="noopener noreferrer" 
        className="blue-link">
@@ -112,4 +114,4 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
     );
 };
 
-export default ProjectHighlights_1;
+export default ProjectHighlights_3;

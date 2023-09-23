@@ -27,7 +27,7 @@
 .project-card {
   flex: 0 0 auto;
   width: calc(20vw);
-  min-width: 300px;
+  min-width: 200px;
   max-width: 550px;
   border: 1px solid #000;
   background-color: #000;
@@ -37,14 +37,18 @@
   display: flex;
   flex-direction: column;
   overflow: hidden; /* Add this line to hide overflow */
+  
 }
 
 .card-body {
- 
+  white-space: normal;
+
+  margin: 0;
+  padding: 0;
   line-height: calc(1.3em + .00811vw - .02432px);
-  flex: 1 1 auto;
-  overflow: hidden; /* If the content inside card-body is large, it can be scrolled */
+ 
 }
+
 
 .card-footer {
   background-color: rgba(0,0,0,.03);
@@ -53,10 +57,11 @@
 }
 
 .project-card h3 {
-  padding: 10px;
+  padding-top: 0px;
   text-align: left;
   font-size: 20px;
   margin: 10px 0;
+  padding-left: 10px;
 }
 
 .project-card p {
@@ -119,4 +124,13 @@
   .project-card {
     width: calc((90vw - 40px) / 3); /* Adjusting card width for mobile views, subtracting the left and right margin */
   }
+}
+
+.project-card:first-child h3 {
+  padding: 10px;
+  margin: 10px 0;
+}
+.project-card:nth-child(6) h3 {
+  padding: 10px;
+  margin: 10px 0;
 }

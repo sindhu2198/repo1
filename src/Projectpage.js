@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import "./Projectpage.css";
-import yoga from "./AllImages/employee_prj.png";
-import ranker from "./AllImages/ranker-banner.png";
-import cowsandbulls from "./AllImages/cowsandbulls.png";
+import employee_prj from "./AllImages/employee_prj.png";
+import deepfake from "./AllImages/deepfake.png";
+import flight from "./AllImages/flight.png";
+import powerbi from "./AllImages/powerbi.png";
+import dietplanner from "./AllImages/dietplanner.png";
+import Sentimental from "./AllImages/sentiment-analysis.png";
 import arrow from "./AllImages/right-arrow.png";
 import { Link } from 'react-router-dom';
 
 const projects = [
-  { src: yoga, title: 'Skill Snapshot', description: 'A knowledge bank in the page of a single page application built on Angular JS framework.' },
-  { src: ranker, title: 'Reddit Deepfake Sentimental Analysis', description: 'Database management system project implemented using MySQL.' },
-  { src: cowsandbulls, title: 'Prediction of Flight Cancellation', description: 'A codebreaking Android game that is developed using Java.' },
-  { src: 'path/to/project4/imag4.jpg', title: 'HR Analytics using Power BI', description: 'Description for project 4.' },
-  { src: 'path/to/project5/imag5.jpg', title: 'UI Diet Planner Bot', description: 'Description for project 5.' },
-  { src: 'path/to/project6/imag6.jpg', title: 'Project Title 6', description: 'Description for project 6.' }
-];
+  { src: employee_prj, title: 'Skill Snapshot',description: 'A web application that tracks the employee performance and provide insightful feedback  '},
+  { src: flight, title: 'Prediction of Flight Cancellation', description: 'Prediction of Flight cancellation using SMOTE Analysis, Regression and different classifiers' },
+  { src: deepfake, title: 'Reddit Deepfake Network Analysis',description:'Network Analysis and Topic Modeling on Deepfake technology using NLP techniques' },
+  { src: Sentimental, title: 'Sentiments of users on wild animal welfare', description: 'Sentiment analysis on societal perceptions and attitudes toward the wild animals welfare' },
+  { src: powerbi, title: 'HR Analytics using Power BI', description: 'A end-to-end analytics and reporting solution built on Power BI to derive HR insights for decision making.' },
+  { src: dietplanner, title: 'UI Diet Planner Bot', description: 'An AI-driven diet planner bot powered by UiPath, streamlining personalized nutrition guidance' }];
+  
 
 function Projectpage({ timelineRef, scrollToSection }) {
   const [scrollIndex, setScrollIndex] = useState(0);
