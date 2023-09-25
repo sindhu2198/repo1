@@ -50,8 +50,9 @@ const ProjectHighlights_3 = ({ shouldOpen }) => {
     <a href="/project1">Skill Snapshot</a>
     <a href="/project2">Prediction of Flight Cancellation</a>
     <a href="/project3">Reddit Deepfake Network Analysis</a>
-    <a href="/project5">Sentiments of users on wild animal welfare</a>
-    <a href="/project6">HR Analytics using Power BI</a>
+    <a href="/project4">Sentimental Analysis of Reddit users on wild animals welfare</a>
+    <a href="/project5">HR Analytics using Power BI</a>
+  
     {/* Add more project links as needed */}
   </div>
 </div>

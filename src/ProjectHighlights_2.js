@@ -48,10 +48,10 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
   Projects <span className="triangle-down"></span>
   <div className="projects-dropdown-content">
     <a href="/project1">Skill Snapshot</a>
-    <a href="/project3">Project 3</a>
-    <a href="/project4">Project 4</a>
-    <a href="/project5">Project 4</a>
-    <a href="/project6">Project 5</a>
+    <a href="/project3">Reddit Deep Sentimental Analysis</a>
+    <a href="/project4">Sentimental Analysis of Reddit users on wild animals welfare</a>
+    <a href="/project5">HR Analytics using PowerBI</a>
+    <a href="/project6">Diet panner bot using UiPath.</a>
     {/* Add more project links as needed */}
   </div>
 </div>

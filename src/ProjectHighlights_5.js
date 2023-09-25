@@ -51,7 +51,7 @@ const ProjectHighlights_3 = ({ shouldOpen }) => {
     <a href="/project2">Prediction of Flight Cancellation</a>
     <a href="/project3">Reddit Deepfake Network Analysis</a>
     <a href="/project4">Sentimental Analysis of Reddit users on wild animals welfare</a>
-    <a href="/project6">Project 6</a>
+    <a href="/project6">Diet panner bot using UiPath</a>
     {/* Add more project links as needed */}
   </div>
 </div>

@@ -73,7 +73,7 @@ function Contactpage({ contactRef, scrollToSection }) {
           </svg>
         </span>
       </a>
-      <a href="https://github.com/sindhu2198" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.iu.edu/duanim" target="_blank" rel="noopener noreferrer">
         <span className="fa-layers MediaBtn fa-3x">
         <style dangerouslySetInnerHTML={{__html: `
         .MediaBtn:hover .MediaBtn__Icon--dynamic-fa-github { 

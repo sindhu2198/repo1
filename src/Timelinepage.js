@@ -25,7 +25,7 @@ function Timelinepage({ contactRef, scrollToSection }) {
             techTools: ["Applied Algorithms","Advanced Database Technology", "Data Mining", "Introduction to Statistics", "Social Media Mining", "Search or Information Retrieval", "Advanced Database Concepts", "Security for Networked Systems", "Database management Systems"]
         },
         { 
-            company: "Employee Management System", 
+            company: "Skill Snapshot(Employee Management System)", 
             year: "",
             university: "Project",
             dateRange: "April 2023-May 2023",
@@ -65,6 +65,15 @@ function Timelinepage({ contactRef, scrollToSection }) {
             dateRange: "Jan 2020- June 2020",
             description: "Worked as an intern at Deloitte, I contributed to the 'MyTechnology' website by crafting APIs and fixing bugs and had worked o backend technologies like C#, supported the QA team in reviewing test plans, and ensured over 75% code coverage through unit testing, collaborating extensively with cross-functional teams.",
             techTools: ["HTML", "ASP.NET", "C#", "JavaScript"]
+        },
+
+        { 
+            company: "Koneru Lakshmaiah University, India", 
+            year: "2016 - 2020",
+            university: "University",
+            dateRange: "June 2016 - May 2020",
+            description: " Bachelor's in Electronics and Communication Engineering",
+            techTools: ["JAVA", "C", "Data Structures", "Python"]
         },
        
         { 
