@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "portfolio-rx"
-  }
+    "default": "portfolio-299d7",
+    "project": "portfolio-299d7"
+  },
+  "targets": {},
+  "etags": {}
 }

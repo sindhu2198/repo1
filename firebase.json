@@ -5,11 +5,16 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
+    ] ,
+    "headers": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "source": "/**",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "http://localhost:3000"
+          }
+        ]
       }
     ]
   }

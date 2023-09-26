@@ -1,6 +1,6 @@
 [
     {
-      "origin": ["https://sindhu-webapp.onrender.com"],
+      "origin": ["https://sindhu-webapp.onrender.com","https://portfolio-299d7.web.app/","http://localhost:3000/"],
       "method": ["GET"],
       "maxAgeSeconds": 3600
     }
