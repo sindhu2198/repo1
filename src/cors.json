@@ -1,0 +1,7 @@
+[
+    {
+      "origin": ["https://sindhu-webapp.onrender.com"],
+      "method": ["GET"],
+      "maxAgeSeconds": 3600
+    }
+  ]
