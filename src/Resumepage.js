@@ -8,7 +8,7 @@ const Resumepage = ({ shouldOpen }) => {
   const [resumeUrl, setResumeUrl] = useState(null);
 
   useEffect(() => {
-    const resumeRef = ref(storage, 'gs://portfolio-299d7.appspot.com/Durga Sindhu_Resume_IUB (3).pdf');
+    const resumeRef = ref(storage, 'gs://portfolio-299d7.appspot.com/Durga Sindhu_Animalla Resume.pdf');
 
     getDownloadURL(resumeRef)
       .then((url) => {
