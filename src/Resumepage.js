@@ -2,44 +2,37 @@ import React, { useEffect, useState } from 'react';
 import { getDownloadURL, ref } from "firebase/storage";
 import { storage } from './firebaseConfig';
 
-
-const Resumepage = () => {
+const Resumepage = ({ shouldOpen }) => {
   const [resumeUrl, setResumeUrl] = useState(null);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
-    console.log("Fetching resume URL...");
-
     const resumeRef = ref(storage, 'gs://portfolio-299d7.appspot.com/Durga Sindhu_Animalla Resume.pdf');
-  
+
     getDownloadURL(resumeRef)
       .then((url) => {
-        console.log("Resume URL fetched:", url);
         setResumeUrl(url);
+        // If the 'shouldOpen' prop is true, then open the resume automatically.
+        if (shouldOpen) {
+          window.open(url, '_blank').focus();
+        }
       })
-      .catch((err) => {
-        console.error("Error fetching resume:", err);
-        setError(err.message || "Failed to fetch resume");
+      .catch((error) => {
+        console.error("Error fetching resume:", error);
       });
-  }, []);
-  
-  const handleOpenResume = () => {
-    console.log("Button clicked. Opening resume...");
-    if (resumeUrl) {
-      window.open(resumeUrl, '_blank');
-    } else {
-      console.warn("Resume URL not available yet.");
-    }
-  };
+  }, [shouldOpen]);
 
   return (
     <div>
-      {error && <p>Error: {error}</p>}
-      
       {resumeUrl ? (
-        <button onClick={handleOpenResume}>
-          Open Resume
-        </button>
+       <button onClick={() => {
+        const uniqueUrl = `${resumeUrl}?timestamp=${new Date().getTime()}`;
+console.log("Trying to open:", uniqueUrl); // Add this line
+window.open(uniqueUrl, '_blank').focus();
+
+      }}>
+        Open Resume
+      </button>
+      
       ) : (
         <p>Loading...</p>
       )}
