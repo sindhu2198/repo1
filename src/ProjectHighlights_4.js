@@ -86,7 +86,7 @@ const ProjectHighlights_3 = ({ shouldOpen }) => {
                             </tr>
                             <tr>
                                 <td>Github Link</td>
-                                <td> <a href="https://github.iu.edu/duanim/sentimentalanalysis" 
+                                <td> <a href="https://github.com/sindhu2198/sentimental_analysis" 
        target="_blank" 
        rel="noopener noreferrer" 
        className="blue-link">
