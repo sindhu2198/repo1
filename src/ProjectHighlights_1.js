@@ -87,7 +87,7 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
                             </tr>
                             <tr>
                                 <td>Github Link</td>
-                                <td> <a href="https://github.iu.edu/ravadap/ADT_ravadap_duanim_Pioneers/tree/render_new" 
+                                <td> <a href="https://github.com/sindhu2198/ravadap_duanim_ADT/tree/render_new" 
        target="_blank" 
        rel="noopener noreferrer" 
        className="blue-link">
