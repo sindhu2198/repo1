@@ -1,101 +1,179 @@
 .hamburger-menu-container {
-    /* ...existing css... */
-    display: none; /* initially hide the hamburger menu */
-    position: relative;
+  /* ...existing css... */
+  display: none; /* initially hide the hamburger menu */
+  position: relative;
 }
 
 .nav-button {
-    color: #fff; /* sets the color of the text in nav-button to white */
+  color: #fff; /* sets the color of the text in nav-button to white */
 }
-  
-  .hamburger-icon {
-    display: block;
-    width: 20px;
-    height: 16px;
-    position: relative;
-    cursor: pointer;
+
+.hamburger-icon {
+  display: block;
+  width: 20px;
+  height: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+.icon-line {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon-line:nth-child(1) {
+  top: 0;
+}
+
+.icon-line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon-line:nth-child(3) {
+  bottom: 0;
+}
+
+.hamburger-icon:hover .icon-line {
+  background-color: #ccc;
+}
+
+.menu-items {
+ 
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  width: fit-content; /* set a fixed width */
+  border-radius: 0px;
+  overflow: hidden;
+
+  z-index: 1;
+  margin-right: 10px;/* add some space to the right */
+  height: 100vh;
+}
+ 
+
+.menu-items {
+  /* ...existing css... */
+  overflow: hidden;
+  display: none; /* initially hide the menu items */
+}
+
+/* ...existing css... */
+
+
+
+@media screen and (max-width: 768px) {
+  .hamburger-menu-container {
+      display: flex; /* show the hamburger menu */
+     
   }
   
-  .icon-line {
-    width: 100%;
-    height: 2px;
-    background-color: #ffffff;
-    position: absolute;
-    left: 0;
+  .nav-list {
+      
+      display: none; /* hide the regular navigation */
+  }
+
+  
+  .menu-items {
+      display: flex; /* show the menu items when in mobile view */
+    }
+  }
+  
+  .menu-item {
+    /* Styling for the individual menu items. Adjust as needed. */
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
     transition: all 0.2s ease-in-out;
   }
   
-  .icon-line:nth-child(1) {
-    top: 0;
+  .menu-item:hover {
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* Core styling for the hamburger menu */
+.hamburger-menu-container {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixes the position relative to the viewport */
+  top: 0; /* Aligns the container at the top */
+  right: 0; /* Aligns the container to the right */
+  padding: 15px; /* Padding for clickable area */
+  z-index: 1000; /* Ensures it stays on top of other elements */
+  cursor: pointer; /* Cursor indicates it's clickable */
+}
+
+/* Core styling for the hamburger icon */
+.hamburger-icon {
+  width: 30px;
+  height: 20px;
+}
+
+.icon-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  transition: background-color 0.2s;
+}
+
+.icon-line:nth-child(1) { top: 0; }
+.icon-line:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.icon-line:nth-child(3) { bottom: 0; }
+
+/* Hover effect for the hamburger lines */
+.hamburger-icon:hover .icon-line {
+  background-color: #ccc; /* Light grey on hover */
+}
+
+/* Adjust the menu-items container to be flexible and responsive */
+.menu-items {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Directly below the hamburger icon */
+  width: 100%; /* Full width of the viewport */
+  background-color: #333; /* Dark background for better visibility */
+  text-align: center;
+  z-index: 1000;
+}
+
+.menu-item {
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.menu-item:hover {
+  color: #ccc; /* Light grey on hover */
+  font-size: medium; /* Slightly larger text on hover */
+}
+
+/* Media query to adjust display properties based on screen width */
+@media screen and (max-width: 750px) {
+  .hamburger-menu-container {
+    display: flex; /* Show the hamburger menu */
+    justify-content: space-between; /* Aligns items to the edges */
+    align-items: center; /* Aligns items to the center vertically */
   }
-  
-  .icon-line:nth-child(2) {
-    top: 50%;
-    transform: translateY(-50%);
+
+  .nav-list {
+    display: none; /* Hide the navigation list on smaller screens */
   }
-  
-  .icon-line:nth-child(3) {
-    bottom: 0;
-  }
-  
-  .hamburger-icon:hover .icon-line {
-    background-color: #ccc;
-  }
-  
+
   .menu-items {
-   
-    flex-direction: column;
-    justify-content: flex-start;
-    position: absolute;
-    top: 100%;
-    right: 0;
- 
-    width: fit-content; /* set a fixed width */
-    border-radius: 0px;
-    overflow: hidden;
-
-    z-index: 1;
-    margin-right: 10px;/* add some space to the right */
-    height: 100vh;
+    display: flex; /* Make the menu visible */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Align items in the center horizontally */
   }
-   
-  
-  .menu-items {
-    /* ...existing css... */
-    overflow: hidden;
-    display: none; /* initially hide the menu items */
-  }
-  
-  /* ...existing css... */
-  
- 
-
-  @media screen and (max-width: 768px) {
-    .hamburger-menu-container {
-        display: flex; /* show the hamburger menu */
-       
-    }
-    
-    .nav-list {
-        
-        display: none; /* hide the regular navigation */
-    }
-
-    
-    .menu-items {
-        display: flex; /* show the menu items when in mobile view */
-      }
-    }
-    
-    .menu-item {
-      /* Styling for the individual menu items. Adjust as needed. */
-      padding: 10px;
-      color: #ffffff;
-      text-decoration: none;
-      transition: all 0.2s ease-in-out;
-    }
-    
-    .menu-item:hover {
-      font-size: medium;
-      font-family: Georgia, 'Times New Roman', Times, serif;
 }
