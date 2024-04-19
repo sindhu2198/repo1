@@ -50,8 +50,8 @@ function Contactpage({ contactRef, scrollToSection }) {
      
         </div>
     
-        <a href="mailto:duanim@iu.edu" className="DuskBtn--outline">
-          duanim@iu.edu
+        <a href="mailto:sindhu.2198@gmail.com" className="DuskBtn--outline">
+          sindhu.2198@gmail.com
         </a>
         <div className="Links-mediaBtn-row">
       <a href="https://www.linkedin.com/in/durgasindhuanimalla/" target="_blank" rel="noopener noreferrer">
