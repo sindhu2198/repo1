@@ -116,6 +116,7 @@ body {
       margin-left: 5vw;   /* Reduced margin for tablets */
       padding-top: 2rem;  /* Adjust padding for better spacing */
       min-height: calc(80vh - 3rem); /* Adjusted for potential smaller headers */
+   
   }
 }
 
@@ -126,16 +127,6 @@ body {
       margin-right: 2vw;  /* Minimal margin for mobile devices */
       margin-left: 2vw;   /* Minimal margin for mobile devices */
       padding-top: 1rem;  /* Reduced padding for tight spaces */
-      min-height: calc(50vh); /* Slightly reduced height for mobile devices */
-  }
-}
-
-@media (max-width: 300px) {
-  .content {
-      align-items: center;
-      margin-right: 1vw;  /* Minimal margin for mobile devices */
-      margin-left: 1vw;   /* Minimal margin for mobile devices */
-      padding-top: 0.5rem;  /* Reduced padding for tight spaces */
       min-height: calc(50vh); /* Slightly reduced height for mobile devices */
   }
 }
@@ -797,4 +788,10 @@ body {
    
   }
 
+ 
+
+  html, body {
+    max-width: 100vw; /* Ensures max width doesn't exceed the viewport width */
+    overflow-x: hidden; /* Hides horizontal overflow */
+  }
   
