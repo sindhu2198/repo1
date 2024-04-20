@@ -1,63 +1,120 @@
 .about-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 100vh;
+  padding: 0; /* No padding here, controlled within child elements */
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .about-content {
   display: flex;
-  flex-direction: row; /* Set the flex direction to row */
-  justify-content: space-between; /* Align content with space between */
-  margin-top: 0px;
-  padding-top: 0px;
-  min-height: calc(80vh - 3.5rem - 4px);
-  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 20px; /* Ensure padding on both sides */
+  box-sizing: border-box;
 }
 
 .about-content__heading {
   font-size: calc(2.5rem + 1.18919vw - 3.56757px);
-  font-family: Merriweather Sans, sans-serif;
-  font-weight: 800;
   color: white;
-  margin-top: 50px;
-  margin-left: 0px;
+  text-align: center;
+  width: 100%; /* Take full width to center the heading */
+  padding-top: 50px; /* Add padding at the top */
 }
 
-@media (min-width: 769px)
-{.profile-image {
-  margin-left: auto; /* Push the image to the extreme right */
-  display: flex;
-  align-items: center; /* Aligns the image vertically */
-  justify-content: center; /* Center the image within the container */
-  height: 100vh; /* Full height of the viewport */
+.about-profile-image {
+  flex: 0 0 auto; /* Do not grow or shrink */
+  margin-right: 2rem; /* Adjust margin to prevent overflow */
+  margin-left: 10vw;
 }
 
+.about-profile-image img {
+  max-width: 100%;
+  max-height: 70%;
+  border-radius: 20%; /* Make image round */
 }
-
-.profile-image img {
-  max-width: 50%; /* Limit the width to half of the viewport */
-  max-height: 50%; /* Ensure the image doesn't exceed the viewport height */
-  border-radius: 20%;
-  object-fit: cover;
-}
-
 
 .description {
-  display: flex;
-  flex-direction: column; /* Set the flex direction to column */
-  text-align: left;
-  max-width: 65%;
-  align-items: flex-start; /* Align content to the start */
   color: white;
-  font-family: "Exo\ 2",sans-serif;
-  font-weight: 400;
-  opacity: .87;
-  white-space: pre-wrap;
-  font-size: calc(1em + .37838vw - 1.13514px);
-  line-height: calc(1.4em + .00811vw - .02432px);
+  font-family: "Exo 2", sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: 24px; /* Consider setting a consistent base font size */
+  text-align: left; /* Align text to the left */
+  max-width: 50%;
+  box-sizing: border-box;
+  margin: 10px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  overflow: hidden;
+}
 
+
+/* Remove height from footer to prevent pushing content down */
+.footer__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media query for larger screens */
+@media (min-width: 769px) {
+  .about-content {
+    flex-direction: row; /* Keep the row layout for larger screens */
+  }
+  
+  .about-profile-image {
+
+    justify-content: flex-start;
+  }
+
+  .about-profile-image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+ 
+}
+
+/* For smaller screens, the layout changes to a column to prevent overflow */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center; /* Center align the items */
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .description {
+    padding: 80px; /* Responsive padding */
+    font-size: calc(4vw + 1px); /* Responsive font size */
+    max-width: 40%;
+    text-align: left;
+    box-sizing: border-box;
+    /* margin-bottom: 20px; */
+    margin: 10px;
+  }
+
+  .about-profile-image {
+    margin-left: 0; /* Reset any left margins */
+    margin-right: 0; /* Reset any right margins */
+    margin-bottom: 20px; /* Add some space below the image */
+    width: 50vw; /* Set the width to 50% of the viewport width */
+    max-width: 200px; /* Limit the maximum size of the image */
+    order: -1; /* Bring the image to the top */
+  }
+
+/* Image element itself */
+.about-profile-image img {
+  width: 100%; /* Full width of its parent */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 20%; /* Rounded corners for the image */
+}
 }
 
 
@@ -67,7 +124,7 @@
   justify-content: center;
   align-items: center;
   width: 100%; /* adjust as needed */
-  height: 30vh; /* adjust as needed */
+
 }
 
 .arrow-link {
@@ -94,4 +151,12 @@
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+
+@media (max-width: 480px) {
+  .description{
+    margin: 2px;
+    padding: 5px;
+  }
+  
 }

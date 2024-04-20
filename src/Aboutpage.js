@@ -8,18 +8,27 @@ function Aboutpage({ projectRef, scrollToSection }) {
 
   return (
     <div id="about" className="about-container">  
-      <div className="content">
-      <h1 className="about-content__heading">About Me</h1>
+       <h1 className="about-content__heading">About Me</h1>
+      <div className="about-content">
+      <div className="about-profile-image">
+          <img src={propic} alt="Profile" />
+        </div>
+   
         <div className="description">
-        <p>I'm a full-stack web developer with expertise in a range of technologies, from front-end frameworks to back-end languages and database management. With a strong foundation in software engineering, I constantly push myself to learn new techniques and adopt industry best practices.
-        I worked as a 
-          software developer at a Big 4 Company, Deloitte, where I learned from the best and had the opportunity to collaborate with top-tier professionals on impactful projects. Currently, I'm expanding my data expertise by pursuing a Master's degree in Data Science at Indiana University Bloomington.
-        </p>
+          <p>I'm a full-stack web developer with expertise in a range of technologies, from front-end frameworks to back-end languages and database management. With a strong foundation in software engineering, I constantly push myself to learn new techniques and adopt industry best practices.
+            I worked as a 
+            software developer at a Big 4 Company, Deloitte, where I learned from the best and had the opportunity to collaborate with top-tier professionals on impactful projects. Currently, I'm expanding my data expertise by pursuing a Master's degree in Data Science at Indiana University Bloomington.
+          </p>
+          <p>I'm a full-stack web developer with expertise in a range of technologies, from front-end frameworks to back-end languages and database management. With a strong foundation in software engineering, I constantly push myself to learn new techniques and adopt industry best practices.
+            I worked as a 
+            software developer at a Big 4 Company, Deloitte, where I learned from the best and had the opportunity to collaborate with top-tier professionals on impactful projects. Currently, I'm expanding my data expertise by pursuing a Master's degree in Data Science at Indiana University Bloomington.
+          </p>
+        
    
         </div>
         
       </div>
-      <div className="footer__container">
+      <div class="footer__container">
    <button
        className="arrow-link"
        onClick={() => scrollToSection(projectRef)}
