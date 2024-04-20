@@ -1,0 +1,185 @@
+.hero-section,
+.hero-section * {
+  box-sizing: border-box;
+}
+.hero-section {
+    display: flex;           /* Using flexbox */
+    justify-content: flex-start; /* Aligns children (content and image) on each side */
+    align-items: center;     /* Centers items vertically */
+    position: relative;      /* Keeps the layout relative for absolute positioned children */
+}
+.hero-section .home-page-content {
+  width: 516.57px;
+  height: 411.65px;
+  position: static;
+}
+.hero-section .hi-i-m-ratan-tejaswi-vadapalli {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Judson-Bold", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  position: absolute;
+  left: 0px;
+  top: 20px;
+  width: 486.47px;
+  height: 70.08px;
+
+  align-items: center;
+  justify-content: flex-start;
+}
+.hero-section
+  .text {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-Light", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  position: absolute;
+  left: 0px;
+  top: 150.08px;
+  width: 600px;
+  height: 285.56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.hero-section .see-myworkbutton {
+  width: 308.05px;
+  height: 55.94px;
+  position: static;
+}
+.hero-section .rectangle-1 {
+  background: #6b66d1;
+  border-radius: 33px;
+  width: 203.32px;
+  height: 55.94px;
+  position: absolute;
+  left: 0px;
+  top: 473.59px;
+}
+.hero-section .see-my-work {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Inter-SemiBold", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: absolute;
+  left: 28.05px;
+  top: 488.59px;
+  width: 280px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.profile-image {
+    margin-left: auto;
+    margin-right: 100px;
+    display: flex;
+    align-items: center; /* Center the image vertically */
+    justify-content: center; /* Center the image horizontally within its container */
+    height: 100%; /* Full height to align with the role frame */
+  }
+  
+  /* Styling for the profile image */
+  .profile-image img {
+    max-width: 100%; /* Make image responsive, ensure it doesn't overflow */
+    max-height: 100%; /* Ensure image height does not exceed its container */
+    border-radius: 20%; /* Rounded corners for the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+  }
+
+/* Existing styles ... */
+
+/* Mobile styles */
+@media (max-width: 750px) {
+    .hero-section {
+      /* Flex column layout */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; /* Add this to center content vertically */
+      text-align: center;
+      padding: 20px; /* Add padding for smaller screens */
+    }
+  
+    /* For the profile image */
+    .profile-image {
+        margin-left: 0; /* Reset any left margins */
+        margin-right: 0; /* Reset any right margins */
+        margin-bottom: 20px; /* Add some space below the image */
+        width: 50vw; /* Set the width to 50% of the viewport width */
+        max-width: 200px; /* Limit the maximum size of the image */
+        order: -1; /* Bring the image to the top */
+      }
+  
+    /* Image element itself */
+    .profile-image img {
+      width: 100%; /* Full width of its parent */
+      height: auto; /* Maintain aspect ratio */
+      border-radius: 20%; /* Rounded corners for the image */
+    }
+  
+    /* Resetting any absolute positioning and adjusting the width */
+    .hero-section .home-page-content,
+    .hero-section .hi-i-m-ratan-tejaswi-vadapalli,
+    .hero-section .text,
+    .hero-section .see-myworkbutton,
+    .hero-section .rectangle-1,
+    .hero-section .see-my-work {
+      position: relative; /* Switch from absolute to relative */
+      left: auto; /* Reset left positioning */
+      top: auto; /* Reset top positioning */
+      width: 65%; /* Adjust to control the width on mobile */
+      margin: 0 auto; /* Adds automatic margin to center horizontally */
+    }
+  
+    /* Text adjustments */
+    .hero-section .hi-i-m-ratan-tejaswi-vadapalli {
+      font-size: 24px; /* Smaller font size for mobile */
+      margin-bottom: 10px; /* Add some space below the heading */
+    }
+  
+    .hero-section .text {
+      font-size: 16px; /* Smaller font size for mobile */
+      margin-bottom: 20px; /* Add some space below the text */
+    }
+  
+    /* Button adjustments */
+    .hero-section .see-myworkbutton {
+        width: 30%; /* Set to 80% of the screen width, adjust as needed */
+        height: auto; /* Height to fit content */
+        position: relative; /* Positioned relative to its normal position */
+        margin: 20px auto; /* Centered horizontally with margin */
+        display: flex; /* Use flexbox for centering content */
+        justify-content: center; /* Center children horizontally */
+        align-items: center; /* Center children vertically */
+        background: #6b66d1; /* Background color */
+        border-radius: 33px; /* Rounded corners */
+        padding: 15px 0; /* Padding top and bottom, adjust as needed */
+      }
+    
+      /* Adjustments for the button text */
+      .hero-section .see-my-work {
+        position: static; /* Default positioning */
+        font-size: 22px; /* Adjust font size as needed */
+        color: #ffffff; /* Text color */
+        text-align: center; /* Center text */
+        width: auto; /* Allow the width to fit content */
+        margin: 0; /* Reset margins */
+        font-family: "Inter-SemiBold", sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: block; /* Display as a block element */
+        /* Remove the need for left and top positioning */
+      }
+    
+      /* If there's a specific size for the text block, use this */
+      .hero-section .rectangle-1 {
+        display: none; /* Hide the extra element if not needed */
+      }
+    
+  
+}

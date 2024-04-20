@@ -1,6 +1,6 @@
 import React from "react";
 import "./Aboutpage.css";
-import propic from "./AllImages/sindhupic.jpeg";
+import propic from "./AllImages/sindhu-bg-color.png";
 import "./Home.css";
 import "./Projectpage";
 
@@ -17,9 +17,7 @@ function Aboutpage({ projectRef, scrollToSection }) {
         </p>
    
         </div>
-        <div className="profile-image">
-          <img src={propic} alt="Profile" />
-        </div>
+        
       </div>
       <div className="footer__container">
    <button

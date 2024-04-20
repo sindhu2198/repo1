@@ -134,7 +134,7 @@ body {
 
 
 .Name__Container {
-    text-align: center;
+    text-align: left;
     padding: 1rem; /* Uniform padding */
     font-size: calc(4vw + 10px); /* Responsive font size */
     width: 100%; /* Full width */

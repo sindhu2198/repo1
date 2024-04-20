@@ -1,0 +1,50 @@
+.roleframe,
+.roleframe * {
+  box-sizing: border-box;
+}
+
+.roleframe {
+  width: 100%; /* Make width responsive */
+  height: auto; /* Height auto for flexibility */
+  min-height: 57.57px; /* Minimum height to maintain design integrity */
+  position: relative;
+  padding: 10px; /* Add padding for smaller screens */
+}
+
+.roleframe .software-developer {
+  background: linear-gradient(
+    90deg,
+    rgba(107, 102, 209, 1) 37.5%,
+    rgba(213, 93, 153, 1) 88.06919455528259%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  font-family: var(--home-sub-head-font-family, "Inter-SemiBold", sans-serif);
+  font-size: calc(16px + 1vw); /* Responsive font size */
+  line-height: 1.2; /* Adjust line height for readability */
+  font-weight: var(--home-sub-head-font-weight, 600);
+  position: absolute;
+  left: 0px; /* Adjusted for padding */
+  top: 20px; /* Adjusted for padding */
+  right: 10px; /* Ensure text does not overflow on smaller devices */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .roleframe .software-developer {
+    font-size: calc(14px + 2vw); /* Larger relative font size for better readability */
+    padding: 0px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .roleframe .software-developer {
+    font-size: calc(12px + 3vw); /* Even larger font size for very small devices */
+    padding: 0px; /* More padding for better text alignment */
+  }
+}

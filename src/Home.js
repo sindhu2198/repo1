@@ -9,6 +9,9 @@ import Projectpage from "./Projectpage";
 import Timelinepage from "./Timelinepage";
 import Contactpage from "./Contactpage";
 import Resumepage from "./Resumepage";
+import { Roleframe } from "./Roleframe";
+import { HeroSection } from "./HeroSection";
+import propic from "./AllImages/sindhu-bg-color.png";
 
 function Home() {
   const aboutRef = useRef(null);
@@ -200,7 +203,9 @@ function Home() {
             
             <div class="Name__Container ">
               <div class="ContentTitle--one">
-            <div class="Name__content">Durga Sindhu</div>
+            <HeroSection className="hero-section"/>
+           
+   
             </div>
  
           </div>

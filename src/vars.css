@@ -1,0 +1,38 @@
+/* Figma Styles of your File */
+:root {
+    /* Colors */
+    /* Fonts */
+    --nav-menu-font-family: Inter-SemiBold, sans-serif;
+    --nav-menu-font-size: 16px;
+    --nav-menu-line-height: normal;
+    --nav-menu-font-weight: 600;
+    --nav-menu-font-style: normal;
+    --home-desc-font-family: Inter-SemiBold, sans-serif;
+    --home-desc-font-size: 16px;
+    --home-desc-line-height: normal;
+    --home-desc-font-weight: 600;
+    --home-desc-font-style: normal;
+    --home-sub-head-font-family: Inter-SemiBold, sans-serif;
+    --home-sub-head-font-size: 30px;
+    --home-sub-head-line-height: normal;
+    --home-sub-head-font-weight: 600;
+    --home-sub-head-font-style: normal;
+    --home-heading-font-family: Inter-SemiBold, sans-serif;
+    --home-heading-font-size: 30px;
+    --home-heading-line-height: 10px;
+    --home-heading-font-weight: 600;
+    --home-heading-font-style: normal;
+    --sectionheading-font-family: Judson-Bold, sans-serif;
+    --sectionheading-font-size: 45px;
+    --sectionheading-line-height: normal;
+    --sectionheading-font-weight: 700;
+    --sectionheading-font-style: normal;
+    --myskills-heading-font-family: Judson-Bold, sans-serif;
+    --myskills-heading-font-size: 45px;
+    --myskills-heading-line-height: normal;
+    --myskills-heading-font-weight: 700;
+    --myskills-heading-font-style: normal;
+  
+    /* Effects */
+  }
+  

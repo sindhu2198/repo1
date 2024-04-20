@@ -27,19 +27,18 @@
 
 @media (min-width: 769px)
 {.profile-image {
-  margin-left: auto; 
-  position: relative;
-  top: -270px; 
-  max-width: 25vw;
-  order: 2;
-  padding: 0;
-
+  margin-left: auto; /* Push the image to the extreme right */
+  display: flex;
+  align-items: center; /* Aligns the image vertically */
+  justify-content: center; /* Center the image within the container */
+  height: 100vh; /* Full height of the viewport */
 }
+
 }
 
 .profile-image img {
-  width: 350px;
-  height: 350px;
+  max-width: 50%; /* Limit the width to half of the viewport */
+  max-height: 50%; /* Ensure the image doesn't exceed the viewport height */
   border-radius: 20%;
   object-fit: cover;
 }
