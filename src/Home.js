@@ -201,14 +201,10 @@ function Home() {
       </header>
           <div className="content">
             
-            <div class="Name__Container ">
-              <div class="ContentTitle--one">
+          
             <HeroSection className="hero-section"/>
            
    
-            </div>
- 
-          </div>
         {/* {showWelcome && (
           <Welcome />
         )} */}

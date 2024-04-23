@@ -59,6 +59,13 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
       </div>
             <div className="image-container">
                 <img src={yoga} alt="Your Image" />
+                <div className="project-overlay">
+        <div className="overlay-content">
+            <h3 className="project-title">Skill Snapshot</h3>
+            <p className="project-description">An Employee Management System</p>
+            <p className="project-tech-stack">Tech Stack: ReactJS, HTML, CSS, NodeJS, MySQL</p>
+        </div>
+    </div>
             </div>
             <div className="table-container">
                 <div className="project_hcard">

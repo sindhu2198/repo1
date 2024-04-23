@@ -138,9 +138,11 @@ text-center {
     font-family: Merriweather Sans, sans-serif;
     font-weight: 800;
     color: white;
-    margin-top: 0px;
+    margin-top: 20pxpx;
     margin-left: 0px;
     line-height: 1.5em;
+    justify-content: center;
+    align-items: center;
   }
   
 

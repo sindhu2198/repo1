@@ -101,8 +101,8 @@ body {
   align-items: center;
   box-sizing: content-box;
   margin-top: 0px;
-  margin-right: 10vw;  /* 10% of the viewport width */
-  margin-left: 10vw;   /* 10% of the viewport width */
+  margin-right: 15vw;  /* 10% of the viewport width */
+  margin-left: 15vw;   /* 10% of the viewport width */
   margin-bottom: 0px;
   min-height: calc(80vh - 3.5rem - 4px); /* Adjusted height considering header */
   padding-top: calc(3.5rem + 4px);
@@ -720,31 +720,12 @@ body {
 }
 
 
-.ContentTitle--one {
-    display: grid;
-    grid-template-rows: auto 1fr;
-  
-}
 
-.Name__content {
-  display: flex;
-  font-family: Merriweather Sans, sans-serif;
-  font-size: 7vw;
-  font-weight: 700;
-  justify-content: center;
-  line-height: 1;
-  padding-top: 0.1em; /* Reduced padding */
-  padding-left: 2em; /* Additional reduced padding */
-  padding-right: 2em; /* Additional reduced padding */
-  padding-bottom: 0.1em; /* Additional reduced padding */
-  text-align: center;
-  color: #ffffff;
-}
 
 .footer__container {
   clear: both;
   display: grid;
-  height: 25vh;
+  height: auto;
   place-items: center;
 }
 
@@ -757,10 +738,10 @@ body {
 }
 
 .Panel__arrow {
-  animation: grow-in 1s ease-in-out 0s backwards, grow-out 2.5s cubic-bezier(.445,.05,.55,.95) 0s infinite;
+ 
   cursor: pointer;
   display: inline-flex;
-  height: 60%;
+  height: 50%;
   flex-direction: column-reverse;
   flex-wrap: wrap;
   align-content: stretch;
@@ -783,8 +764,8 @@ body {
   }
   
   .arrow-link:hover {
-    transform: scale(1.1); /* Enlarges the arrow-link slightly when hovered over */
-    transition: all 0.2s ease-in-out; /* Makes the enlarging effect smooth */
+    transform: scale(1); /* Enlarges the arrow-link slightly when hovered over */
+    transition: all 0.1s ease-in-out; /* Makes the enlarging effect smooth */
    
   }
 

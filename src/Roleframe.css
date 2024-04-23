@@ -8,7 +8,8 @@
   height: auto; /* Height auto for flexibility */
   min-height: 57.57px; /* Minimum height to maintain design integrity */
   position: relative;
-  padding: 10px; /* Add padding for smaller screens */
+  padding: 20px; /* Add padding for smaller screens */
+  bottom: 10px;
 }
 
 .roleframe .software-developer {
@@ -37,14 +38,18 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .roleframe .software-developer {
-    font-size: calc(14px + 2vw); /* Larger relative font size for better readability */
-    padding: 0px; /* Adjust padding */
+    /* Adjust styles for tablets and other medium-sized devices */
+    font-size: calc(12px + 2vw);
   }
 }
 
 @media (max-width: 480px) {
   .roleframe .software-developer {
-    font-size: calc(12px + 3vw); /* Even larger font size for very small devices */
-    padding: 0px; /* More padding for better text alignment */
+    /* Adjust styles specifically for mobile devices with screens less than 480px */
+    font-size: calc(12px + 3vw);
+    top: 20px; /* Adjust as necessary */
+    left: 10px; /* Adjust as necessary */
+    right: 10px; /* Give some space on the right */
+    justify-content: center; /* Center the text if needed */
   }
 }
