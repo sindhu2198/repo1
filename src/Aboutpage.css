@@ -6,6 +6,7 @@
   padding: 0; /* No padding here, controlled within child elements */
   box-sizing: border-box;
   overflow: hidden;
+ 
 }
 
 .about-content {
@@ -24,6 +25,7 @@
   text-align: center;
   width: 100%; /* Take full width to center the heading */
   padding-top: 50px; /* Add padding at the top */
+
 }
 
 .about-profile-image {
@@ -33,7 +35,7 @@
   display: flex;
   align-items: center; /* Center the image vertically */
   justify-content: center; /* Center the image horizontally within its container */
-  height: 100%; /* Full height to align with the role frame */
+  height: 100%;
  
 }
 
@@ -131,6 +133,7 @@
   justify-content: center;
   align-items: center;
   width: 100%; /* adjust as needed */
+
 
 }
 

@@ -20,11 +20,12 @@ export const HeroSection = ({ className }) => {
           intuitive solutions. Dive into my world of innovative app development,
           where technology meets creativity.
         </div>
-      </div>
-      <div className="see-myworkbutton">
+        <div className="see-my-work-button-container">
         <div className="rectangle-1"></div>
-        <div className="see-my-work">See my work</div>
+        <button className="see-my-work">See My Work</button>
       </div>
+      </div>
+      
       <div className="profile-image">
         <img src={propic} alt="Profile" />
       </div>

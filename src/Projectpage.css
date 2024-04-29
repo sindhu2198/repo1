@@ -15,6 +15,17 @@
   align-items: center;
   justify-content: center;
   padding: 10px;
+
+}
+.projects-big-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0; /* No padding here, controlled within child elements */
+  box-sizing: border-box;
+  overflow: hidden;
+ 
 }
 
 .project-card:hover .project-info,
@@ -23,8 +34,10 @@
 }
 
 .project-title {
+  margin:5px;
   font-size: 1.5rem;
   text-align: center;
+  padding: 5px;
 }
 
 .project-description {
@@ -35,9 +48,21 @@
 
 .view-project {
   display: none;
+  color: #ffffff;
 }
 
+.card-footer {
+  display: none;
+}
 
+.project-card:hover .card-footer {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+
+}
 
 .about-container {
   width: 100%;
@@ -91,15 +116,9 @@
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   width: 100%;
-  padding: 10px;
 }
 
-.card-footer {
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
-  text-align: center;
-}
+
 
 .show-more-btn {
   padding: 10px;
@@ -114,4 +133,76 @@
   width: 50px;
   height: auto;
   color: #ffffff;
+}
+
+.card-footer a {
+  display: inline-block;
+  text-decoration: none;
+  color: black; /* Default text color */
+  background-color: #f8f9fa; /* Default background */
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+
+/* Styles for screens between 480px and 750px */
+@media (max-width: 750px) {
+  .project-scroll-container {
+    flex-direction: column; /* Stack cards on smaller screens */
+    align-items: center; /* Align cards for smaller screens */
+    gap: 20px; /* Add some space between cards */
+    padding: 0; /* Remove padding */
+  }
+  
+
+  .project-card {
+    width: calc(50% - 100px); /* 2 projects, minus the gap */
+    height: 300px; /* Adjustable height */
+    margin: 0 50px; /* 100px gap divided by two sides */
+    /* Other styles... */
+  }
+
+  .show-more-btn {
+    position: absolute; /* Position button absolutely */
+    right: 10px; /* Place it towards the right */
+    top: 50%; /* Center it vertically */
+    transform: translateY(-50%); /* Align center */
+    /* More button styles... */
+  }
+  .project-card.hovered .project-info {
+    opacity: 1;
+  }
+}
+
+/* Styles for screens less than 480px */
+@media (max-width: 480px) {
+  .project-scroll-container {
+    flex-direction: column; /* Stack cards on smaller screens */
+    align-items: center; /* Align cards for smaller screens */
+    gap: 20px; /* Add some space between cards */
+    padding: 0; /* Remove padding */
+  }
+
+
+    .project-card {
+      width: 300px; /* Adjustable width */
+      height: 300px; /* Adjustable height */
+      border: 1px solid #ccc;
+      position: relative;
+      overflow: hidden;
+      position: relative;
+      overflow: hidden;
+      align-items: start;
+      display: flex;
+      align-items: center;
+    
+    }
+  
+    .project-card.hovered .project-info {
+      opacity: 1;
+    }
+  .show-more-btn {
+    display: none; /* Hide 'Show More' button on smaller screens */
+  }
+ 
 }

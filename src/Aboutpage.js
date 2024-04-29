@@ -27,6 +27,7 @@ function Aboutpage({ projectRef, scrollToSection }) {
    
         </div>
         
+        
       </div>
       <div class="footer__container">
    <button
@@ -38,6 +39,8 @@ function Aboutpage({ projectRef, scrollToSection }) {
        </div>
    </button>
 </div>
+
+      
     </div>
   );
 }

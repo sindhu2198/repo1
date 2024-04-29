@@ -23,6 +23,8 @@
     margin-right: 10vw;
     margin-left: 10vw;
     min-height: 100vh;
+    overflow: hidden;
+  
 }
 
 .Timeline-container:before {
@@ -95,6 +97,10 @@
   font-weight: 500;
   line-height: 1.5em;
   margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  
 }
 text-center {
   text-align: center!important;
@@ -117,7 +123,8 @@ text-center {
     margin-bottom: 0px;
     margin-left: 10vw;
     min-height: 100vh;
-    padding-top: calc(3.5rem + 4px);
+ 
+    overflow: hidden;
   }
 
 
@@ -132,19 +139,7 @@ text-center {
 .text-center {
   text-align: center!important;
 }
-  
-  .timeline-content__heading {
-    font-size: calc(2.5rem + 1.18919vw - 3.56757px);
-    font-family: Merriweather Sans, sans-serif;
-    font-weight: 800;
-    color: white;
-    margin-top: 20pxpx;
-    margin-left: 0px;
-    line-height: 1.5em;
-    justify-content: center;
-    align-items: center;
-  }
-  
+
 
   .Timeline-card__info {
     background: #2b343a;

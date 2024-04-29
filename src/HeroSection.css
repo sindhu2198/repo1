@@ -31,7 +31,7 @@
   color: #ffffff;
   font-family: "europa", sans-serif;
   font-size: clamp(14px, 4vw, 20px); /* Responsive font size */
-  margin-bottom: 20px; /* Bottom margin */
+  margin-bottom: 30px; /* Bottom margin */
   line-height: 1.4; /* Adjust line spacing */
   word-wrap: break-word; /* Prevents long words from overflowing */
   word-break: break-word; /* Break words if needed to prevent overflow */
@@ -40,43 +40,46 @@
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  margin-right:30px
 
 }
 
-.hero-section .see-myworkbutton {
-  width: 308.05px;
+.hero-section .see-my-work-button-container {
+  position: relative; /* Ensures that the button container is positioned relative to the hero-section */
+  width: 250.05px;
   height: 55.94px;
-  position: static;
 }
+
 .hero-section .rectangle-1 {
   background: #6b66d1;
   border-radius: 33px;
-  width: 203.32px;
-  height: 55.94px;
-  position: absolute;
-  left: 0px;
-  top: 473.59px;
+  width: 100%; /* Adjusted to take the full width of the container */
+  height: 100%; /* Adjusted to take the full height of the container */
+  position: absolute; /* Positioned absolutely to fill the container */
 }
+
 .hero-section .see-my-work {
   color: #ffffff;
-  text-align: left;
+  text-align: center;
   font-family: "Inter-SemiBold", sans-serif;
   font-size: 22px;
   font-weight: 600;
   text-transform: uppercase;
   position: absolute;
-  left: 28.05px;
-  top: 488.59px;
-  width: 280px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* Center the text within the button */
+  width: 250px; /* Adjust if needed */
   height: 26px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  background-color: transparent;
+  border:none;
+  outline:none;
 }
+
 
 .profile-image {
     margin-left: auto;
-    margin-right: 100px;
+    margin-right: auto;
     display: flex;
     align-items: center; /* Center the image vertically */
     justify-content: center; /* Center the image horizontally within its container */
@@ -125,15 +128,8 @@
     .hero-section .home-page-content,
     .hero-section .hi-i-m-ratan-tejaswi-vadapalli,
     .hero-section .text,
-    .hero-section .see-myworkbutton,
-    .hero-section .rectangle-1,
-    .hero-section .see-my-work {
-      position: relative; /* Switch from absolute to relative */
-      left: auto; /* Reset left positioning */
-      top: auto; /* Reset top positioning */
-      width: 65%; /* Adjust to control the width on mobile */
-      margin: 0 auto; /* Adds automatic margin to center horizontally */
-    }
+    
+   
   
     /* Text adjustments */
     .hero-section .hi-i-m-ratan-tejaswi-vadapalli {
@@ -145,41 +141,11 @@
       font-size: 16px; /* Smaller font size for mobile */
       margin-bottom: 20px; /* Add some space below the text */
    
+   
     }
   
     /* Button adjustments */
-    .hero-section .see-myworkbutton {
-        width: 30%; /* Set to 80% of the screen width, adjust as needed */
-        height: auto; /* Height to fit content */
-        position: relative; /* Positioned relative to its normal position */
-        margin: 20px auto; /* Centered horizontally with margin */
-        display: flex; /* Use flexbox for centering content */
-        justify-content: center; /* Center children horizontally */
-        align-items: center; /* Center children vertically */
-        background: #6b66d1; /* Background color */
-        border-radius: 33px; /* Rounded corners */
-        padding: 15px 0; /* Padding top and bottom, adjust as needed */
-      }
     
-      /* Adjustments for the button text */
-      .hero-section .see-my-work {
-        position: static; /* Default positioning */
-        font-size: 22px; /* Adjust font size as needed */
-        color: #ffffff; /* Text color */
-        text-align: center; /* Center text */
-        width: auto; /* Allow the width to fit content */
-        margin: 0; /* Reset margins */
-        font-family: "Inter-SemiBold", sans-serif;
-        font-weight: 600;
-        text-transform: uppercase;
-        display: block; /* Display as a block element */
-        /* Remove the need for left and top positioning */
-      }
-    
-      /* If there's a specific size for the text block, use this */
-      .hero-section .rectangle-1 {
-        display: none; /* Hide the extra element if not needed */
-      }
       html, body {
         max-width: 100vw;
         overflow-x: hidden; /* Prevent horizontal overflow */
@@ -188,30 +154,73 @@
       * {
         box-sizing: border-box; /* Make sure padding and borders are included in total width and height */
       }
-      @media (max-width: 480px) {
-        .hero-section .text {
-          margin:auto;
-          font-size: 12px;
-          text-align: left;
-          padding: 0 50px;
-          word-wrap: break-word; /* Prevents long words from overflowing */
-          word-break: break-word;
-          top:0;
-          justify-content: center;
-          overflow: hidden; /* Break words if needed to prevent overflow */ /* Even smaller font size for very small devices */
-          
-        }
-        .hero-section .hi-i-m-ratan-tejaswi-vadapalli {
-          font-size: 24px; /* Smaller font size for mobile */
-          margin-bottom: 10px; /* Add some space below the heading */
-          text-align: center;
-          word-wrap: break-word; /* Prevents long words from overflowing */
-          word-break: break-word;
-          overflow: hidden;
-          align-items: center;
-        }
-      }
+     
   
 }
+@media (max-width: 480px) {
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all content horizontally */
+    justify-content: center; /* Centers content vertically, if needed */
+    padding: 20px; /* Adds padding around the section */
+  }
+
+  .hero-section .text {
+    margin: 10px 120px; /* Centers text block horizontally */
+    font-size: 14px; /* More readable font size */
+    padding: 0 30px; /* Less padding for narrow screens */
+    text-align: left; /* Centers text */
+    word-wrap: break-word;
+    overflow: hidden; /* Keeps text within the container */
+    
+  }
+
+  .hero-section .hi-i-m-ratan-tejaswi-vadapalli {
+    font-size: 20px; /* Slightly reduced font size for balance */
+    text-align: center; /* Ensures the heading is centered */
+    margin-bottom: 10px; /* Space below the heading */
+    overflow: hidden;
+  }
+
+  .hero-section .see-my-work-button-container {
+    position: relative; /* Ensures that the button container is positioned relative to the hero-section */
+    width: 200.05px;
+    height: 50.94px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0 auto; /* Center horizontally */
+  }
+
+  .hero-section .rectangle-1 {
+    background: #6b66d1;
+    border-radius: 33px;
+    width: 100%; /* Adjusted to take the full width of the container */
+    height: 100%; /* Adjusted to take the full height of the container */
+    position: absolute; /* Positioned absolutely to fill the container */
+  }
+
+  .hero-section .see-my-work {
+    color: #ffffff;
+    text-align: center;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: absolute;
+    left: calc(50% - 125px); /* Center horizontally */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    width: 250px; /* Adjust if needed */
+    height: 26px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+}
+
+
 
 

@@ -97,7 +97,7 @@ function Timelinepage({ contactRef, scrollToSection }) {
     return (
         <div id="about" className="timeline-container">
             <div className="timeline-content">
-                <h1 className="timeline-content__heading">Timeline</h1>
+                <h1 className="about-content__heading">Timeline</h1>
                 <div className="timeline-wrapper">
                     {data.map((item, index) => (
                     <div key={item.company + index} className={`Timeline-container ${index === data.length - 1 ? 'last-card' : ''}`}>
