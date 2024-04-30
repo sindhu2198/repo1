@@ -1,10 +1,13 @@
 import React from 'react';
 import './SkillsPage.css'; // You will create and style this CSS file according to your needs
 import flask from "./AllImages/flask.svg";
+import aws from "./AllImages/aws.svg";
 import "./Timelinepage"
+import { useEffect, useRef } from 'react';
 
 
 function SkillsPage({ timelineRef, scrollToSection }) {
+    const skillRefs = useRef([]);
   // In real code, you would likely import these from a constants file or receive them as props
   const frontendSkills = [
     { name: 'HTML5', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg' },
@@ -17,7 +20,7 @@ function SkillsPage({ timelineRef, scrollToSection }) {
     { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg' },
     { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg' },
     { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
-    { name: 'AWS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons…nwebservices/amazonwebservices-plain-wordmark.svg' }
+    { name: 'AWS', icon: aws }
   ];
 
   const frameworksSkills = [
@@ -34,10 +37,34 @@ function SkillsPage({ timelineRef, scrollToSection }) {
     { name: 'Redis', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg' }
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('zoomIn');
+          } else {
+            entry.target.classList.remove('zoomIn');
+          }
+        });
+      },
+      {
+        root: null, // Default setting to check visibility in the viewport
+        rootMargin: '0px',
+        threshold: 0.1 // Consider lowering the threshold if elements are not triggering as expected
+      }
+    );
+  
+    const elements = document.querySelectorAll('.skill'); // Make sure all '.skill' elements are selected
+    elements.forEach(element => observer.observe(element));
+  
+    return () => elements.forEach(element => observer.unobserve(element));
+  }, []);
+  
   const renderSkillSet = (skills) => (
     <div className="skills-set">
       {skills.map((skill, index) => (
-        <div className="skill" key={index}>
+        <div className="skill" ref={el => skillRefs.current[index] = el} key={index}>
           <img src={skill.icon} alt={`${skill.name} icon`} className="skill-icon"/>
           <p>{skill.name}</p>
         </div>

@@ -54,14 +54,17 @@
     justify-content: space-evenly;
     gap: 10px; /* Reduced gap for a tighter layout */
   }
-  
   .skill {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: zoomInAnimation 0.5s ease forwards;
-    padding: 5px; /* Reduced padding */
-    margin: 5px; /* Reduced margin */
+    opacity: 0; /* Start with hidden icons */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for zoom and fade-in */
+  }
+  
+  .skill.zoomIn {
+    transform: scale(1.1); /* Zoom effect */
+    opacity: 1; /* Make icon visible */
   }
   
   .skill-icon {
