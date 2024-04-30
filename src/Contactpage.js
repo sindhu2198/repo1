@@ -42,7 +42,7 @@ function Contactpage({ contactRef, scrollToSection }) {
 
   return (
     <div id="contact" className="contact-container">  
-       <div className="content">
+       <div className="contactcontent">
   
       <div className="contact-content__heading">GOT A PROJECT?
       <br/>
@@ -50,7 +50,7 @@ function Contactpage({ contactRef, scrollToSection }) {
      
         </div>
     
-        <a href="mailto:sindhu.2198@gmail.com" className="DuskBtn--outline">
+        <a href="mailto:sindhu.2198@gmail.com" className="contact-DuskBtn--outline">
           sindhu.2198@gmail.com
         </a>
         <div className="Links-mediaBtn-row">

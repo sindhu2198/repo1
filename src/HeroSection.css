@@ -165,12 +165,12 @@
   }
 
   .hero-section .text {
-    margin: 10px 120px; /* Centers text block horizontally */
-    font-size: 14px; /* More readable font size */
-    padding: 0 30px; /* Less padding for narrow screens */
-    text-align: left; /* Centers text */
+    margin: 20px 0px;
+    font-size: 14px;
+    padding: 0 0px;
+    text-align: left;
     word-wrap: break-word;
-    overflow: hidden; /* Keeps text within the container */
+    overflow: hidden;
     
   }
 

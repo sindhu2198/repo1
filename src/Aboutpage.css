@@ -168,7 +168,7 @@
     padding: 0 50px; /* Responsive padding */
     font-size: 12px;
     line-height: 1.25; /* Responsive font size */
-    max-width: 40%;
+    max-width: 100%;
     text-align: left;
     box-sizing: border-box;
     word-wrap: break-word;
