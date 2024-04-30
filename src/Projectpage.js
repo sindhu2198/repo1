@@ -7,6 +7,7 @@ import powerbi from "./AllImages/powerbi.png";
 import dietplanner from "./AllImages/dietplanner.png";
 import Sentimental from "./AllImages/sentiment-analysis.png";
 import arrow from "./AllImages/right-arrow.png";
+import "./Skillspage";
 import { Link } from 'react-router-dom';
 
 const projects = [
@@ -18,7 +19,7 @@ const projects = [
   { src: dietplanner, title: 'UI Diet Planner Bot', description: 'An AI-driven diet planner bot powered by UiPath, streamlining personalized nutrition guidance.',  techStack: ['UiPath', 'AI', 'ML'] }
 ];
 
-function Projectpage({ timelineRef, scrollToSection }) {
+function Projectpage({ skillsRef, scrollToSection }) {
   const [scrollIndex, setScrollIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 750);
   useEffect(() => {
@@ -76,7 +77,7 @@ function Projectpage({ timelineRef, scrollToSection }) {
       <div className="footer__container">
    <button
        className="arrow-link"
-       onClick={() => scrollToSection(timelineRef)}
+       onClick={() => scrollToSection(skillsRef)}
    >
        <div className="arrow">
            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="Panel__arrow"><path d="M0 0h24v24H0z" fill="none"></path><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 12l-4-4h8l-4 4z" fill="#ffffff"></path></svg>

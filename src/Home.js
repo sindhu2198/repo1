@@ -9,6 +9,7 @@ import Projectpage from "./Projectpage";
 import Timelinepage from "./Timelinepage";
 import Contactpage from "./Contactpage";
 import Resumepage from "./Resumepage";
+import SkillsPage from "./Skillspage";
 import { Roleframe } from "./Roleframe";
 import { HeroSection } from "./HeroSection";
 import propic from "./AllImages/sindhu-bg-color.png";
@@ -17,6 +18,7 @@ function Home() {
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
   const projectRef = useRef(null);
+  const skillsRef= useRef(null);
   const timelineRef = useRef(null);
   const resumeRef = useRef(null);
 
@@ -123,6 +125,7 @@ function Home() {
               <div className="menu-items">
                 <Link to="/about" className="menu-item">About</Link>
                 <Link to="/Projects" className="menu-item">Projects</Link>
+                <Link to="/Skills" className="menu-item">Skills</Link>
                 <Link to="/Timeline" className="menu-item">Timeline</Link>
                 <Link to="/Resume" className="menu-item">Resume</Link>
                 <Link to="/Contact" className="menu-item">Contact</Link>
@@ -159,10 +162,23 @@ function Home() {
               <li>
                 <button
                   className={`nav-button ${
+                    activeNav === "skills" ? "active" : ""
+                  }`}
+                  onClick={() => handleNavigation(skillsRef)}
+                  onMouseEnter={() => handleHover("skillsRef")}
+                  onMouseLeave={handleHoverOut}
+                >
+                  SKILLS
+                </button>
+                
+              </li>
+              <li>
+                <button
+                  className={`nav-button ${
                     activeNav === "timeline" ? "active" : ""
                   }`}
                   onClick={() => handleNavigation(timelineRef)}
-                  onMouseEnter={() => handleHover("Timeline")}
+                  onMouseEnter={() => handleHover("timelineRef")}
                   onMouseLeave={handleHoverOut}
                 >
                   TIMELINE
@@ -243,7 +259,10 @@ function Home() {
       </div>
      
       <div ref={projectRef}>
-        <Projectpage timelineRef={timelineRef} scrollToSection={scrollToSection} />
+        <Projectpage skillsRef={skillsRef} scrollToSection={scrollToSection} />
+      </div>
+      <div ref={skillsRef}>
+        <SkillsPage timelineRef={timelineRef} scrollToSection={scrollToSection} />
       </div>
       <div ref={timelineRef}>
         <Timelinepage contactRef={contactRef}  scrollToSection={scrollToSection} />

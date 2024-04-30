@@ -1,0 +1,138 @@
+/* SkillsPage.css */
+
+.skills-page-container {
+    padding: 20px 80px; /* Reduced overall padding for a more compact layout */
+    color: #ffffff;
+    background-color: transparent; /* Assuming a dark theme */
+    font-family: 'Arial', sans-serif;
+    max-height: 200vh;
+    margin-bottom: 80px;
+
+  }
+  /* Container for all skill sections */
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1000px; /* Set a max width to control the overall size */
+    background-color: transparent; /* Background color for the skills container */
+    max-height: 100vh;
+    margin-bottom: 40px;
+   /* Optional: adds subtle shadow for depth */
+  }
+  
+  /* Reduced padding and margins in sections for a tighter layout */
+  .skill-section {
+    margin-bottom: 10px; /* Less space between sections */
+  }
+  
+  .skill-section h2 {
+    margin-bottom: 5px; /* Less space below headers */
+  }
+  
+  
+  .skills-description {
+    margin-bottom: 20px; /* Reduced margin for compactness */
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .skill-section {
+    margin-bottom: 20px; /* Less space between sections */
+  }
+  
+  .skill-section h2 {
+    margin-bottom: 10px; /* Less space below headers */
+    text-align: left;
+  }
+  
+  .skills-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px; /* Reduced gap for a tighter layout */
+  }
+  
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: zoomInAnimation 0.5s ease forwards;
+    padding: 5px; /* Reduced padding */
+    margin: 5px; /* Reduced margin */
+  }
+  
+  .skill-icon {
+    width: 50px; /* Smaller icons for compactness */
+    height: auto;
+    margin-bottom: 5px;
+  }
+  
+  /* Specific styles for different skill sections to match background patterns */
+
+  .backend, .frameworks, .database {
+    background-color: transparent; /* Different sections might have different backgrounds or none */
+  }
+  
+  @keyframes zoomInAnimation {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .skills-page-container {
+      padding: 20px; /* More padding on smaller screens for touch friendliness */
+    }
+  
+    .skill-icon {
+      width: 40px; /* Adjust for smaller screens */
+    }
+  
+    .skills-description {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skills-page-container {
+        padding: 5px; /* More padding on smaller screens for touch friendliness */
+      }
+    .skill-icon {
+      width: 30px; /* Even smaller icons on very small screens */
+    }
+    .skills-description {
+        font-size: 0.25rem;
+      }
+
+      .skills-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0 auto;
+        padding: 20px;
+        max-width: 1000px; /* Set a max width to control the overall size */
+        background-color: transparent; /* Background color for the skills container */
+        max-height: 100vh;
+        margin-bottom: 0px;
+       /* Optional: adds subtle shadow for depth */
+      }
+
+      .skills-page-container {
+        padding: 20px 0px; /* Reduced overall padding for a more compact layout */
+        background-color: transparent; /* Assuming a dark theme */
+        font-family: 'Arial', sans-serif;
+        max-height: 100vh;
+        margin-bottom: 0px;
+    
+      }
+  }
+  
