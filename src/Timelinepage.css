@@ -281,7 +281,7 @@ div p {
 }
 .timeline-wrapper {
   position: relative;
-  
+  padding: 2em 0;
   padding-bottom: 30px;
 }
 
@@ -290,3 +290,98 @@ div p {
   margin-top: 0; /* or any other value to set the gap to your preference */
   margin-bottom: 40px;
 }
+
+
+/* Continue using your existing styles for large screens */
+
+/* Continue using your existing styles for larger screens */
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .timeline-container {
+      flex-direction: column;
+      align-items: center; 
+  }
+
+  
+.Timeline {
+  display: grid;
+  grid-template-columns: 0fr 0fr;
+  grid-template-areas: "c";
+  position: relative;
+}
+
+
+  .Timeline-card {
+    margin-left: auto;  
+    margin-right: auto;
+    margin: 2.5em 3em 8em 2.5em;
+    margin-left: 20px;  /* Adjust margin to keep cards aligned right of the timeline */
+    width: calc(100% - 60px);  /* Adjust width considering margin */
+  }
+
+  .Timeline:before, .timeline-wrapper::before {
+      left: 50%; 
+  }
+
+  .Timeline-card--right, .Timeline-card--left {
+      grid-column: 1; 
+  }
+
+  .Timeline:before {
+    
+    background-color: transparent;
+    border-radius: 0%;
+    box-shadow: 0 0 0 0px transparent, inset 0 2px 0 rgb(0 0 0/8%), 0 3px 0 4px rgb(0 0 0/5%);
+    content: "";
+    height: 1em;
+    left: 50%;
+    position: absolute;
+    transform: translate(calc(-50% + 2px),calc(-50% + 0.3em));
+    width: 1em;
+}
+
+  .Timeline-card__heading {
+    padding: 5px;
+    font-size: 1pc;
+    font-family: Merriweather Sans, sans-serif;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-content {
+      margin-right: 5%; 
+      margin-left: 5%;
+  }
+
+  .Timeline-card {
+      font-size: 0.8em; 
+  }
+
+  .Timeline-card__heading {
+    padding: 5px;
+ 
+    font-family: Merriweather Sans, sans-serif;
+
+    line-height: 1.5em;
+  
+    justify-content: center;
+    align-items: center;
+    color: white;
+    
+  }
+
+  .Timeline-card__list-item {
+      font-size: 0.7em;  
+  }
+
+  .Timeline{
+    margin-left: 50px;
+  }
+}
+

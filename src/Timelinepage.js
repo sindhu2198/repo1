@@ -25,7 +25,7 @@ function Timelinepage({ contactRef, scrollToSection }) {
             techTools: ["Applied Algorithms","Advanced Database Technology", "Data Mining", "Introduction to Statistics", "Social Media Mining", "Search or Information Retrieval", "Advanced Database Concepts", "Security for Networked Systems", "Database management Systems"]
         },
         { 
-            company: "Skill Snapshot(Employee Management System)", 
+            company: "Skill Snapshot", 
             year: "",
             university: "Project",
             dateRange: "April 2023-May 2023",
