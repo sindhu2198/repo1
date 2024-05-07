@@ -32,12 +32,17 @@
 /* Other styles remain the same */
 
 .table-container {
-  display: flex;             /* Make this a flex container */
-  justify-content: center;   /* Center children horizontally */
-  align-items: center;       /* Center children vertically */
-  padding-top: 0px;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  height: calc(100vh - 50vh); /* Take the remaining viewport height minus the image height */
+    display: flex;
+    flex-direction: column; /* Ensure stacking of content vertically */
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    height: calc(100vh - 50vh); /* Take remaining height after image */
+    overflow-y: auto; /* Enable vertical scrolling */
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
 }
 
 
@@ -48,9 +53,9 @@
   padding: 10px;
   text-align: center;
   border-bottom: 1px solid #000000;  /* Add a border to separate from table */
-  font-family: Merriweather Sans,sans-serif;
+  font-family: "poppins",sans-serif;
   font-weight: 800;
-  font-style: italic;
+  
 }
 
 /* Adjusted the order of th styles to make the headers look more like the card header */
@@ -70,6 +75,7 @@ th {
   background-color: white;
   border-radius: 8px;  /* Rounded edges */
   overflow: hidden;  /* Makes sure child elements do not break the rounded corners */
+  font-family: "poppins", sans-serif;
   height: 80%;
 }
 
@@ -103,7 +109,7 @@ body.project-highlights-body {
   display: flex;
   justify-content: space-between; /* Distributes items evenly */
   align-items: center;
-  padding: 10px;
+  padding-top: 40px;
   position: absolute; /* To place it over the image */
   width: 100%;
   top: 0;
@@ -116,6 +122,7 @@ body.project-highlights-body {
   background: none;
   border: none;
   color: #FFF;
+  font-family: "poppins", sans-serif;
   cursor: pointer;
   z-index: 11; /* Higher than the parent */
 }
@@ -134,7 +141,7 @@ body.project-highlights-body {
   display: flex;
   position: absolute;
   background-color: #191a1c;
-  width: 75vw;
+  width: 400px;
   padding-right: 20px;
   overflow: hidden;
   flex-direction: column;
@@ -143,7 +150,7 @@ body.project-highlights-body {
    /*white-space: normal;
   max-width: 900px; /* Maximum width with right gap */
   right: 20px; /* Right gap */
-  color: #FFF;
+  color: transparent;
   padding: 5PX;  /* Removed the padding to ensure full width is used for wrapping */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   
@@ -163,6 +170,7 @@ body.project-highlights-body {
   word-break: break-word; /* Breaks words to the next line if needed */
   color: #f0efef;
   text-decoration: none;
+  font-family: "poppins", sans-serif;
  /* Add some padding for better appearance when hovering */
   padding-bottom: 10px;
 
@@ -228,4 +236,40 @@ body.project-highlights-body {
 .project-description,
 .project-tech-stack {
   font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .table-container {
+      height: 50vh; /* Smaller height for mobile */
+      width: 90%; /* Adjust width for smaller screens */
+  }
+
+  th, td {
+      font-size: 0.8rem; /* Smaller font size to fit content */
+      padding: 6px; /* Reduce padding to fit more items */
+  }
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+  .table-container {
+      height: 40vh; /* Adjust further for very small screens */
+      width: 100%; /* Full-width on mobile */
+  }
+  .projects-dropdown-content {
+
+    width: 50vw;
+   
+    
+  }
+  .navigation .projects-dropdown {
+
+    padding-right: 0px;
+    padding-top: 0px;
+  }
+  
+  th, td {
+      font-family: "poppins", sans-serif;
+      font-size: 0.7rem; /* Smaller font size */
+      padding: 4px; /* Further reduce padding */
+  }
 }

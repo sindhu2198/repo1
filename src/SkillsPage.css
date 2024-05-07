@@ -129,7 +129,7 @@
         padding: 20px;
         max-width: 1000px; /* Set a max width to control the overall size */
         background-color: transparent; /* Background color for the skills container */
-        max-height: 100vh;
+       
         margin-bottom: 0px;
        /* Optional: adds subtle shadow for depth */
       }
@@ -138,7 +138,7 @@
         padding: 20px 0px; /* Reduced overall padding for a more compact layout */
         background-color: transparent; /* Assuming a dark theme */
         font-family: 'Arial', sans-serif;
-        max-height: 100vh;
+      
         margin-bottom: 0px;
     
       }

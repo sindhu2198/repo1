@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from "react";
 import './ProjectHighlights_1.css';
 import dietplanner from "./AllImages/dietplanner.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getDownloadURL, ref } from "firebase/storage";
 import { storage } from './firebaseConfig';
 const ProjectHighlights_3 = ({ shouldOpen }) => {
     const [project1Url, setproject1Url] = useState(null);
-  
+    const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+    const navigate = useNavigate();
+
+    const handleBackClick = () => {
+      console.log("Back button clicked, navigating to /"); // Debug log
+        navigate('/'); // Navigates to the home page
+    }
+const toggleDropdownVisibility = () => {
+      setIsDropdownVisible(!isDropdownVisible);
+  };
+
     useEffect(() => {
       const project1Ref = ref(storage, 'gs://portfolio-299d7.appspot.com/sentimental_analysis.pdf.pdf');
   
@@ -21,9 +31,7 @@ const ProjectHighlights_3 = ({ shouldOpen }) => {
           console.error("Error fetching Report:", error);
         });
     }, [shouldOpen]);
-  const handleBackClick = () => {
-    document.querySelector('.hidden-back-link').click();
-}
+ 
     useEffect(() => {
         document.body.classList.add('project-highlights-body');
         return () => {
@@ -38,14 +46,13 @@ const ProjectHighlights_3 = ({ shouldOpen }) => {
           @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,350;1,300;1,500&display=swap');
         `}
       </style>
-           <div className="navigation">
-          
-           <Link to="/#projects" className="hidden-back-link" style={{ display: 'none' }}></Link>
-           <button className="back-button" onClick={handleBackClick}>
-            Back
-        </button>
+      <div className="navigation">
+           <button className="back-button" onClick={handleBackClick}>Back</button>
         <div className="projects-dropdown">
-  Projects <span className="triangle-down"></span>
+        <button onClick={toggleDropdownVisibility} className="dropdown-toggle">
+                        Projects <span className="triangle-down"></span>
+                    </button>
+                    {isDropdownVisible && (
   <div className="projects-dropdown-content">
     <a href="/project1">Skill Snapshot</a>
     <a href="/project2">Prediction of Flight Cancellation</a>
@@ -55,6 +62,7 @@ const ProjectHighlights_3 = ({ shouldOpen }) => {
   
     {/* Add more project links as needed */}
   </div>
+                    )}
 </div>
 
       </div>

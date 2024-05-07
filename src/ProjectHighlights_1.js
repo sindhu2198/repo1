@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { getDownloadURL, ref } from "firebase/storage";
 import { storage } from './firebaseConfig';
 const ProjectHighlights_1 = ({ shouldOpen }) => {
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
     const [project1Url, setproject1Url] = useState(null);
     const navigate = useNavigate();
 
@@ -12,6 +13,10 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
       console.log("Back button clicked, navigating to /"); // Debug log
         navigate('/'); // Navigates to the home page
     }
+    const toggleDropdownVisibility = () => {
+      setIsDropdownVisible(!isDropdownVisible);
+  };
+
     useEffect(() => {
       const project1Ref = ref(storage, 'gs://portfolio-299d7.appspot.com/ADT_FINAL_REPORT.pdf');
    
@@ -26,7 +31,7 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
           console.error("Error fetching Report:", error);
         });
     }, [shouldOpen]);
-    
+   
   
     useEffect(() => {
         document.body.classList.add('project-highlights-body');
@@ -43,10 +48,12 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
         `}
       </style>
            <div className="navigation">
-          
            <button className="back-button" onClick={handleBackClick}>Back</button>
         <div className="projects-dropdown">
-  Projects <span className="triangle-down"></span>
+        <button onClick={toggleDropdownVisibility} className="dropdown-toggle">
+                        Projects <span className="triangle-down"></span>
+                    </button>
+                    {isDropdownVisible && (
   <div className="projects-dropdown-content">
     <a href="/project2">Prediction of Flight Cancellation using Kaggle Dataset</a>
     <a href="/project3">Reddit Deep Sentimental Analysis</a>
@@ -55,6 +62,7 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
     <a href="/project6">Diet panner bot using UiPath.</a>
     {/* Add more project links as needed */}
   </div>
+   )}
 </div>
 
       </div>
