@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+
 
 }
 .projects-big-container {
@@ -48,6 +48,12 @@
   padding: 10px;
 }
 
+.project-tech-stack {
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px;
+}
+
 .view-project {
   display: none;
   color: #ffffff;
@@ -55,12 +61,14 @@
 
 .card-footer {
   display: none;
+  
 }
 
 .project-card:hover .card-footer {
   display: block;
   position: absolute;
   bottom: 10px;
+
   width: 100%;
   text-align: center;
 

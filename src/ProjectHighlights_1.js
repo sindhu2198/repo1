@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from "react";
 import './ProjectHighlights_1.css';
 import yoga from "./AllImages/employee_prj.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getDownloadURL, ref } from "firebase/storage";
 import { storage } from './firebaseConfig';
 const ProjectHighlights_1 = ({ shouldOpen }) => {
     const [project1Url, setproject1Url] = useState(null);
-  
+    const navigate = useNavigate();
+
+    const handleBackClick = () => {
+      console.log("Back button clicked, navigating to /"); // Debug log
+        navigate('/'); // Navigates to the home page
+    }
     useEffect(() => {
       const project1Ref = ref(storage, 'gs://portfolio-299d7.appspot.com/ADT_FINAL_REPORT.pdf');
-  
+   
       getDownloadURL(project1Ref)
         .then((url) => {
           setproject1Url(url);
@@ -21,9 +26,8 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
           console.error("Error fetching Report:", error);
         });
     }, [shouldOpen]);
-  const handleBackClick = () => {
-    document.querySelector('.hidden-back-link').click();
-}
+    
+  
     useEffect(() => {
         document.body.classList.add('project-highlights-body');
         return () => {
@@ -40,10 +44,7 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
       </style>
            <div className="navigation">
           
-           <Link to="/#projects" className="hidden-back-link" style={{ display: 'none' }}></Link>
-           <button className="back-button" onClick={handleBackClick}>
-            Back
-        </button>
+           <button className="back-button" onClick={handleBackClick}>Back</button>
         <div className="projects-dropdown">
   Projects <span className="triangle-down"></span>
   <div className="projects-dropdown-content">
@@ -59,13 +60,7 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
       </div>
             <div className="image-container">
                 <img src={yoga} alt="Your Image" />
-                <div className="project-overlay">
-        <div className="overlay-content">
-            <h3 className="project-title">Skill Snapshot</h3>
-            <p className="project-description">An Employee Management System</p>
-            <p className="project-tech-stack">Tech Stack: ReactJS, HTML, CSS, NodeJS, MySQL</p>
-        </div>
-    </div>
+               
             </div>
             <div className="table-container">
                 <div className="project_hcard">

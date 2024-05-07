@@ -45,19 +45,25 @@
   text-align: right; /* Text aligned to the right */
   z-index: 999; /* High z-index but less than the menu toggle */
   flex-direction: column; /* Organizes children in a column */
-  align-items: flex-end; /* Aligns menu items to the right */
+  border: none; /* No border */
   width: auto; /* Auto width based on content size */
   padding-right: 5px; /* Right padding for aesthetics */
   overflow: hidden; /* Prevents any overflow */
+  background-color: transparent;
 }
 
 .menu-item {
   padding: 10px;
   color: #ffffff;
+  background-color: transparent;
   text-decoration: none;
   transition: color 0.2s ease;
+  border-radius: 0%;
 }
 
+.menu-item button{
+  color: transparent;
+}
 .menu-item:hover {
   color: #ccc; /* Light grey on hover for visual feedback */
   font-size: medium; /* Slightly larger text on hover */

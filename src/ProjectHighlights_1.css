@@ -18,7 +18,7 @@
   align-items: center; /* Center the image vertically */
   justify-content: center; /* Center the image horizontally */
   height: 50vh;       /* Assuming you want it to take half the viewport height */
-  padding: 0;
+  padding-top: 40px;
   overflow: hidden;   /* This will hide any overflowed content */
 }
 
@@ -107,6 +107,7 @@ body.project-highlights-body {
   position: absolute; /* To place it over the image */
   width: 100%;
   top: 0;
+  z-index: 10; /* Higher value ensures it stays above other elements */
 }
 
 
@@ -116,6 +117,7 @@ body.project-highlights-body {
   border: none;
   color: #FFF;
   cursor: pointer;
+  z-index: 11; /* Higher than the parent */
 }
 
 .navigation .projects-dropdown {
@@ -129,9 +131,14 @@ body.project-highlights-body {
 }
 
 .projects-dropdown-content {
-  display: none;
+  display: flex;
   position: absolute;
   background-color: #191a1c;
+  width: 75vw;
+  padding-right: 20px;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-start;
   /*max-width: 500px;*/
    /*white-space: normal;
   max-width: 900px; /* Maximum width with right gap */
@@ -152,10 +159,11 @@ body.project-highlights-body {
 
 .projects-dropdown-content a {
   display: block;  /* This will force each <a> to its own line */
-  white-space: nowrap;
+  word-wrap: break-word; /* Allows breaking at words */
+  word-break: break-word; /* Breaks words to the next line if needed */
   color: #f0efef;
   text-decoration: none;
-  padding-right: 50px; /* Add some padding for better appearance when hovering */
+ /* Add some padding for better appearance when hovering */
   padding-bottom: 10px;
 
  

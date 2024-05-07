@@ -122,15 +122,14 @@ function Home() {
           </div>
            {/* Only display the menu when the hamburger menu is clicked */}
            {isMenuOpen && (
-              <div className="menu-items">
-                <Link to="/about" className="menu-item">About</Link>
-                <Link to="/Projects" className="menu-item">Projects</Link>
-                <Link to="/Skills" className="menu-item">Skills</Link>
-                <Link to="/Timeline" className="menu-item">Timeline</Link>
-                <Link to="/Resume" className="menu-item">Resume</Link>
-                <Link to="/Contact" className="menu-item">Contact</Link>
-
-              </div>
+             <div className="menu-items">
+             <button className="menu-item" onClick={() => handleNavigation(aboutRef)}>About</button>
+             <button className="menu-item" onClick={() => handleNavigation(projectRef)}>Projects</button>
+             <button className="menu-item" onClick={() => handleNavigation(skillsRef)}>Skills</button>
+             <button className="menu-item" onClick={() => handleNavigation(timelineRef)}>Timeline</button>
+             <button className="menu-item" onClick={() => handleNavigationresume(resumeRef, "resume")}>Resume</button>
+             <button className="menu-item" onClick={() => handleNavigation(contactRef)}>Contact</button>
+           </div>
             )}
             <ul className="nav-list">
           
