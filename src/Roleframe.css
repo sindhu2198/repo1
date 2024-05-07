@@ -15,20 +15,21 @@
 .roleframe .software-developer {
   background: linear-gradient(
     90deg,
-    rgba(107, 102, 209, 1) 37.5%,
-    rgba(213, 93, 153, 1) 88.06919455528259%
+    rgba(107, 102, 209, 1) 25.5%,
+    rgba(213, 93, 153, 1) 60.0%
   );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: left;
-  font-family: var(--home-sub-head-font-family, "Inter-SemiBold", sans-serif);
-  font-size: calc(16px + 1vw); /* Responsive font size */
+  font-family: "Poppins", sans-serif;
+  font-size: calc(12px + 1vw); /* Responsive font size */
   line-height: 1.2; /* Adjust line height for readability */
   font-weight: var(--home-sub-head-font-weight, 600);
   position: absolute;
   left: 0px; /* Adjusted for padding */
   top: 20px; /* Adjusted for padding */
+  bottom: 10px;
   right: 10px; /* Ensure text does not overflow on smaller devices */
   display: flex;
   align-items: center;
@@ -45,6 +46,7 @@
 
 @media (max-width: 480px) {
   .roleframe .software-developer {
+    
     /* Adjust styles specifically for mobile devices with screens less than 480px */
     font-size: calc(12px + 3vw);
     top: 20px; /* Adjust as necessary */

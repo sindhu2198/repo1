@@ -1,6 +1,7 @@
 import React from "react";
 import "./Aboutpage.css";
 import propic from "./AllImages/sindhu-bg-color.png";
+import sindhupic from "./AllImages/sindhupic.jpeg";
 import "./Home.css";
 import "./Projectpage";
 
@@ -11,17 +12,15 @@ function Aboutpage({ projectRef, scrollToSection }) {
        <h1 className="about-content__heading">About Me</h1>
       <div className="about-content">
       <div className="about-profile-image">
-          <img src={propic} alt="Profile" />
+          <img src={sindhupic} alt="Profile" />
         </div>
    
         <div className="description">
-          <p>I'm a full-stack web developer with expertise in a range of technologies, from front-end frameworks to back-end languages and database management. With a strong foundation in software engineering, I constantly push myself to learn new techniques and adopt industry best practices.
-            I worked as a 
-            software developer at a Big 4 Company, Deloitte, where I learned from the best and had the opportunity to collaborate with top-tier professionals on impactful projects. Currently, I'm expanding my data expertise by pursuing a Master's degree in Data Science at Indiana University Bloomington.
+          <p>
+          I'm Durga Sindhu Animalla, a full-stack web developer with expertise across a broad range of technologies, from front-end frameworks like React.js to back-end languages such as Python and Java. With a solid foundation in software engineering, I continually challenge myself to learn new techniques, stay updated on industry trends, and deliver efficient, scalable solutions. My experience includes working as a software developer at Deloitte, one of the Big 4 consulting firms, where I collaborated with industry-leading professionals to develop and deploy impactful projects. My time at Deloitte helped sharpen my skills in developing secure, scalable applications while contributing to cross-functional teams.
+
           </p>
-          <p>I'm a full-stack web developer with expertise in a range of technologies, from front-end frameworks to back-end languages and database management. With a strong foundation in software engineering, I constantly push myself to learn new techniques and adopt industry best practices.
-            I worked as a 
-            software developer at a Big 4 Company, Deloitte, where I learned from the best and had the opportunity to collaborate with top-tier professionals on impactful projects. Currently, I'm expanding my data expertise by pursuing a Master's degree in Data Science at Indiana University Bloomington.
+          <p>I've recently earned a Master's in Data Science from Indiana University Bloomington, where I deepened my knowledge of data mining, statistical analysis, and machine learning. During my studies, I completed a range of innovative projects. I'm always striving to blend my passion for data science and full-stack development to create seamless, data-driven user experiences. My goal is to continue leveraging my unique combination of skills to tackle new challenges and drive meaningful impact.
           </p>
         
    

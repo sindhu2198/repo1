@@ -29,6 +29,7 @@
   }
   
   .skill-section h2 {
+    font-family: "poppins", sans-serif;
     margin-bottom: 5px; /* Less space below headers */
   }
   
@@ -37,6 +38,7 @@
     margin-bottom: 20px; /* Reduced margin for compactness */
     text-align: center;
     font-size: 1.2rem;
+    font-family: "poppins", sans-serif;
   }
   
   .skill-section {
@@ -44,6 +46,7 @@
   }
   
   .skill-section h2 {
+    font-family: "poppins", sans-serif;
     margin-bottom: 10px; /* Less space below headers */
     text-align: left;
   }
@@ -102,6 +105,7 @@
   
     .skills-description {
       font-size: 1rem;
+      font-family: "poppins", sans-serif;
     }
   }
   
@@ -114,6 +118,7 @@
     }
     .skills-description {
         font-size: 0.25rem;
+        font-family: "poppins", sans-serif;
       }
 
       .skills-wrapper {

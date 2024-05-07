@@ -20,9 +20,9 @@ function Timelinepage({ contactRef, scrollToSection }) {
             company: "Masters in Data Science", 
             year: "2022-2024",
             university: "Indiana University, Bloomington",
-            dateRange: "2022-Present",
-            description: "Pusuing masters in Data Science Program at Indiana University, Bloomington",
-            techTools: ["Applied Algorithms","Advanced Database Technology", "Data Mining", "Introduction to Statistics", "Social Media Mining", "Search or Information Retrieval", "Advanced Database Concepts", "Security for Networked Systems", "Database management Systems"]
+            dateRange: "2022-2024",
+            description: "Completed Masters in Data Science Program at Indiana University, Bloomington",
+            techTools: ["Applied Algorithms","Advanced Database Technology", "Data Mining", "Introduction to Statistics", "Social Media Mining", "Search or Information Retrieval", "Advanced Database Concepts", "Security for Networked Systems", "Database management Systems","Information Visualisation"]
         },
         { 
             company: "Skill Snapshot", 
@@ -111,15 +111,10 @@ function Timelinepage({ contactRef, scrollToSection }) {
                                 <div className={`Timeline-card__collapse ${activeCards.includes(index) ? 'show' : ''}`}>
                                     <div className="Timeline-card__info">
                                         <div className="Timeline-card__info-item">
-                                        <svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="graduation-cap" className="svg-inline--fa fa-graduation-cap " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                                         <path fill="currentColor" d="M414.8 40.79L286.8 488.8C281.9 505.8 264.2 515.6 247.2 510.8C230.2 505.9 220.4 488.2 225.2 471.2L353.2 23.21C358.1 6.216 375.8-3.624 392.8 1.232C409.8 6.087 419.6 23.8 414.8 40.79H414.8zM518.6 121.4L630.6 233.4C643.1 245.9 643.1 266.1 630.6 278.6L518.6 390.6C506.1 403.1 485.9 403.1 473.4 390.6C460.9 378.1 460.9 357.9 473.4 345.4L562.7 256L473.4 166.6C460.9 154.1 460.9 133.9 473.4 121.4C485.9 108.9 506.1 108.9 518.6 121.4V121.4zM166.6 166.6L77.25 256L166.6 345.4C179.1 357.9 179.1 378.1 166.6 390.6C154.1 403.1 133.9 403.1 121.4 390.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4L121.4 121.4C133.9 108.9 154.1 108.9 166.6 121.4C179.1 133.9 179.1 154.1 166.6 166.6V166.6z"></path>
-
-                                         </svg>&nbsp;&nbsp;&nbsp;{item.university}
+                                        &nbsp;&nbsp;&nbsp;{item.university}
                                         </div>
                                         <div className="Timeline-card__info-item">
-                                        <svg width="20" height="20" aria-hidden="true" focusable="false" data-prefix="far" data-icon="calendar" className="svg-inline--fa fa-calendar " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                        <path fill="currentColor" d="M152 64H296V24C296 10.75 306.7 0 320 0C333.3 0 344 10.75 344 24V64H384C419.3 64 448 92.65 448 128V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V128C0 92.65 28.65 64 64 64H104V24C104 10.75 114.7 0 128 0C141.3 0 152 10.75 152 24V64zM48 448C48 456.8 55.16 464 64 464H384C392.8 464 400 456.8 400 448V192H48V448z"></path>
-                                         </svg>&nbsp;&nbsp;&nbsp;{item.dateRange}
+                                        &nbsp;&nbsp;&nbsp;{item.dateRange}
                                         </div>
                                     </div>
                                     <p className="Timeline-card__description">{item.description}</p>

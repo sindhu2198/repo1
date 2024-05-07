@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./Roleframe.css";
 
-const roles = ["Software Developer", "iOS Developer", "Full Stack Developer"]; // Array of roles
+const roles = ["Software Developer","Full Stack Developer", "Data Analyst"]; // Array of roles
 
 export const Roleframe = ({ className }) => {
   const [currentRole, setCurrentRole] = useState(0); // State to keep track of the current role index

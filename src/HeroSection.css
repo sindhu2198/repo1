@@ -17,9 +17,9 @@
 .hero-section .hi-i-m-ratan-tejaswi-vadapalli {
   color: #ffffff;
   text-align: left;
-  font-family: "Judson-Bold", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 45px;
-  font-weight: 700;
+  font-weight: 600;
   left: 0px;
   top: 20px;
   align-items: center;
@@ -28,19 +28,19 @@
 
 
 .hero-section .text {
-  color: #ffffff;
-  font-family: "europa", sans-serif;
-  font-size: clamp(14px, 4vw, 20px); /* Responsive font size */
+  color: #e4d4d4;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(14px, 4vw, 16px); /* Responsive font size */
   margin-bottom: 30px; /* Bottom margin */
-  line-height: 1.4; /* Adjust line spacing */
+  line-height: 1.25; /* Adjust line spacing */
   word-wrap: break-word; /* Prevents long words from overflowing */
   word-break: break-word; /* Break words if needed to prevent overflow */
-  text-align: left; /* Center text alignment */
+  text-align: justify; /* Center text alignment */
   display: flex;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  margin-right:30px
+  margin-right:40px
 
 }
 
@@ -56,24 +56,26 @@
   width: 100%; /* Adjusted to take the full width of the container */
   height: 100%; /* Adjusted to take the full height of the container */
   position: absolute; /* Positioned absolutely to fill the container */
+  z-index: -1;
 }
 
-.hero-section .see-my-work {
+.see-my-work{
   color: #ffffff;
+  cursor: pointer; /* Ensure pointer cursor is displayed */
   text-align: center;
-  font-family: "Inter-SemiBold", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 22px;
   font-weight: 600;
+  width: 100%;
   text-transform: uppercase;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); /* Center the text within the button */
-  width: 250px; /* Adjust if needed */
-  height: 26px;
+  transform: translate(-50%, -50%); /* Center the text */
   background-color: transparent;
-  border:none;
-  outline:none;
+  border: none;
+  outline: none;
+  z-index: 1; /* Ensure button appears above the background layer */
 }
 
 
@@ -88,8 +90,8 @@
   
   /* Styling for the profile image */
   .profile-image img {
-    max-width: 100%; /* Make image responsive, ensure it doesn't overflow */
-    max-height: 100%; /* Ensure image height does not exceed its container */
+    max-width: 320px; /* Make image responsive, ensure it doesn't overflow */
+    max-height: 50%; /* Ensure image height does not exceed its container */
     border-radius: 20%; /* Rounded corners for the image */
     object-fit: cover; /* Ensure the image covers the area without distortion */
   }
@@ -116,6 +118,7 @@
         max-width: 200px; /* Limit the maximum size of the image */
         order: -1; /* Bring the image to the top */
       }
+
   
     /* Image element itself */
     .profile-image img {
@@ -140,6 +143,7 @@
     .hero-section .text {
       font-size: 16px; /* Smaller font size for mobile */
       margin-bottom: 20px; /* Add some space below the text */
+      text-align: justify;
    
    
     }
@@ -170,6 +174,7 @@
     padding: 0 0px;
     text-align: left;
     word-wrap: break-word;
+    font-family: "poppins", sans-serif;
     overflow: hidden;
     
   }
@@ -178,6 +183,7 @@
     font-size: 20px; /* Slightly reduced font size for balance */
     text-align: center; /* Ensures the heading is centered */
     margin-bottom: 10px; /* Space below the heading */
+    font-family: "poppins", sans-serif;
     overflow: hidden;
   }
 
@@ -197,10 +203,12 @@
     width: 100%; /* Adjusted to take the full width of the container */
     height: 100%; /* Adjusted to take the full height of the container */
     position: absolute; /* Positioned absolutely to fill the container */
+    z-index: -1;
   }
 
   .hero-section .see-my-work {
     color: #ffffff;
+    cursor: pointer;
     text-align: center;
     font-family: "Inter-SemiBold", sans-serif;
     font-size: 22px;

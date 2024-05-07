@@ -9,9 +9,9 @@
   }
   
   .contact-content__heading {
-    font-family: sans-serif;
+    font-family: "poppins", sans-serif;
     font-size: 1.3em;
-    font-weight: 900;
+    font-weight: 700;
     text-align: center;
     color: white;
   }
@@ -36,6 +36,7 @@
     width: fit-content;
     margin-top: 0;
     font-size: 0.8em;
+    font-family: "poppins", sans-serif;
   }
   
 
@@ -97,9 +98,9 @@
 }
 .contact-content__heading {
   margin-top: 150px;
-  font-family: sans-serif;
+  font-family: "poppins", sans-serif;
   font-size: 0.5em;
-  font-weight: 900;
+  font-weight: 800;
   text-align: center;
   color: white;
 }

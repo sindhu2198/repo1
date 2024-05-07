@@ -1,6 +1,7 @@
 import React from 'react';
 import './SkillsPage.css'; // You will create and style this CSS file according to your needs
 import flask from "./AllImages/flask.svg";
+import aspnet from "./AllImages/aspnet.svg"
 import aws from "./AllImages/aws.svg";
 import "./Timelinepage"
 import { useEffect, useRef } from 'react';
@@ -19,14 +20,15 @@ function SkillsPage({ timelineRef, scrollToSection }) {
   const backendSkills = [
     { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg' },
     { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg' },
-    { name: 'PHP', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
+    { name: 'C#', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg' },
     { name: 'AWS', icon: aws }
   ];
 
   const frameworksSkills = [
-    { name: 'Spring', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg' },
+   
     { name: 'Node.js', icon: 'https://shubhambhagat.com/assets/img/nextjs__logo__dark.svg' },
-    { name: 'Flask', icon: flask },
+    { name: 'Streamlit', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg' },
+    { name: 'ASP.net', icon: aspnet },
     { name: 'Bootstrap', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg' }
   ];
 
@@ -34,7 +36,7 @@ function SkillsPage({ timelineRef, scrollToSection }) {
     { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg' },
     { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original-wordmark.svg' },
     { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg' },
-    { name: 'Redis', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg' }
+    { name: 'DynamoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dynamodb/dynamodb-original.svg' }
   ];
 
   useEffect(() => {

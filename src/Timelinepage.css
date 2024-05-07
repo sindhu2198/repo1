@@ -93,7 +93,7 @@
 .Timeline-card__heading {
   padding: 5px;
   font-size: 1.5pc;
-  font-family: Merriweather Sans, sans-serif;
+  font-family: "poppins", sans-serif;
   font-weight: 500;
   line-height: 1.5em;
   margin-bottom: 20px;
@@ -130,7 +130,7 @@ text-center {
 
   .Timeline-date {
     color: hsla(0,0%,100%,.7);
-    font-family: Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+    font-family: "poppins", sans-serif;
     font-size: 1.5em;
     line-height: 1em;
     padding-top: 0.5em;
@@ -156,7 +156,7 @@ text-center {
     align-items: flex-start; /* Vertical alignment of items */
     flex-direction: column;
     margin-left: 0px;
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: "poppins", sans-serif;
     margin: 1em 0;
 
 
@@ -167,7 +167,7 @@ text-center {
 
 .Timeline-card__description {
   font-size: 1.1pc;
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "poppins", sans-serif;
   margin: 1em 0;
   white-space: pre-wrap;
   margin-bottom: 10px;
@@ -177,7 +177,7 @@ text-center {
 
 
 .Timeline-card p {
-  font-family: 'Merriweather Sans', sans-serif;
+  font-family: "poppins", sans-serif;
   opacity: .87;
   display: block;
   margin-block-start: 1em;
@@ -197,6 +197,7 @@ text-center {
   margin: 0;
   padding: 0;
   row-gap: 0.5em;
+  font-family: "poppins", sans-serif;
   border-radius: 0.5px;
   background: #2b343a;
   border-radius: 2px;
@@ -256,10 +257,10 @@ text-center {
     margin-left: 0px;
 }
 div p {
-  font-family: 'AnotherFont', sans-serif;
+  font-family: "poppins", sans-serif;
 }
 .Timeline-card__description {
-  font-family: 'Roboto', sans-serif;
+  font-family: "poppins", sans-serif;
 }
 .Timeline-container.last-card:before {
   display: none;
@@ -344,7 +345,7 @@ div p {
   .Timeline-card__heading {
     padding: 5px;
     font-size: 1pc;
-    font-family: Merriweather Sans, sans-serif;
+    font-family: "poppins", sans-serif;
     margin-bottom: 20px;
     justify-content: center;
     align-items: center;

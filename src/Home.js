@@ -215,16 +215,15 @@ function Home() {
           
         </nav>
       </header>
-          <div className="content">
-            
-          
-            <HeroSection className="hero-section"/>
-           
-   
-        {/* {showWelcome && (
-          <Welcome />
-        )} */}
+      <div className="content">
+        {/* Pass the project reference to HeroSection */}
+        <HeroSection projectRef={projectRef} />
       </div>
+
+
+
+  
+   
       <div class="footer__container">
    <button
        className="arrow-link"
