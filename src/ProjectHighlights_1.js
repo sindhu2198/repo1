@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './ProjectHighlights_1.css';
-import yoga from "./AllImages/employee_prj.png";
+import yoga from "./AllImages/movies2.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import { getDownloadURL, ref } from "firebase/storage";
 import { storage } from './firebaseConfig';
@@ -79,25 +79,25 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
                         <thead>
                             <tr>
                                 <th>Project Name</th>
-                                <th>Skill Snapshot(An Employee Management System) </th>
+                                <th>Filmpire </th>
                             </tr>
                         </thead>
                         <tbody>
                         <tr>
                                 <td>Tech Stack</td>
-                                <td>ReactJS, HTML, CSS, NodeJS, MySQL</td>
+                                <td>ReactJS, Reduct, HTML, CSS, Firebase, MovieOrg API</td>
                             </tr>
                             <tr>
                                 <td>Time Duration</td>
-                                <td>20 days</td>
+                                <td>Present</td>
                             </tr>
                             <tr>
                                 <td>Status</td>
-                                <td>Completed</td>
+                                <td>Ongoing</td>
                             </tr>
                             <tr>
                                 <td>Github Link</td>
-                                <td> <a href="https://github.com/sindhu2198/ravadap_duanim_ADT/tree/render_new" 
+                                <td> <a href="https://github.iu.edu/duanim/filmpirerepo" 
        target="_blank" 
        rel="noopener noreferrer" 
        className="blue-link">
@@ -105,17 +105,14 @@ const ProjectHighlights_1 = ({ shouldOpen }) => {
     </a></td>
                             </tr>
                             <tr>
-                <td>Project Report</td>
-                <td>
-                  {project1Url ? (
-                    <a href={project1Url} target="_blank" rel="noopener noreferrer" className="blue-link">
-                      Open Report
-                    </a>
-                  ) : (
-                    "Loading..."
-                  )}
-                </td>
-              </tr>
+                                <td>Project Link</td>
+                                <td> <a href="https://filmpire-page.vercel.app/" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       className="blue-link">
+      Project Link
+    </a></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

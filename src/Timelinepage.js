@@ -25,11 +25,11 @@ function Timelinepage({ contactRef, scrollToSection }) {
             techTools: ["Applied Algorithms","Advanced Database Technology", "Data Mining", "Introduction to Statistics", "Social Media Mining", "Search or Information Retrieval", "Advanced Database Concepts", "Security for Networked Systems", "Database management Systems","Information Visualisation"]
         },
         { 
-            company: "Skill Snapshot", 
+            company: "Filmpire", 
             year: "",
             university: "Project",
-            dateRange: "April 2023-May 2023",
-            description: "Developed a sophisticated web-based application utilizing React for the front-end and NodeJS for the backend, enhanced by intricate designs created with HTML and CSS. This application serves as a resource for managers and HR teams to monitor, evaluate, and track employee performance, growth, and milestones consistently. With an intuitive user interface, the application empowers managers to provide ratings, constructive feedback, and visualize performance trends over time through dynamic charts and graphs. Ensuring data integrity and security, all employee metrics and feedback are stored in a robust MySQL database, which also offers scalability for future feature integrations. Moreover, the application is designed to adapt seamlessly across devices, providing managers the flexibility to assess and give feedback on-the-go.",
+            dateRange: "June 2024-Present",
+            description: "Developed a sophisticated web-based application utilizing React for the front-end and NodeJS for the backend, enhanced by intricate designs created with HTML and CSS. This application serves as a resource for movie lovers with an intuitive user interface, the application empowers them to provide ratings, add movies to their watchlist and favourites based on their interest. The data integrity and security is taken care by the moviedb org api that provides all movie related information. This application also offers scalability for increasing volume of data. Moreover, the application is designed to adapt seamlessly across devices.",
             techTools: ["MySQL","ReactJs", "NodeJS","HTML", "CSS"]
         },
         { 

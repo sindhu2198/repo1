@@ -54,7 +54,7 @@ const toggleDropdownVisibility = () => {
                     </button>
                     {isDropdownVisible && (
   <div className="projects-dropdown-content">
-    <a href="/project1">Skill Snapshot</a>
+    <a href="/project1">Filmpire</a>
     <a href="/project2">Prediction of Flight Cancellation</a>
     <a href="/project3">Reddit Deepfake Network Analysis</a>
     <a href="/project5">HR Analytics using PowerBI</a>

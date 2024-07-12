@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Projectpage.css";
-import employee_prj from "./AllImages/employee_prj.png";
+import movies from "./AllImages/movies.jpg";
 import deepfake from "./AllImages/deepfake.png";
 import flight from "./AllImages/flight.png";
 import powerbi from "./AllImages/powerbi.png";
@@ -11,7 +11,7 @@ import "./Skillspage";
 import { Link } from 'react-router-dom';
 
 const projects = [
-  { src: employee_prj, title: 'Skill Snapshot', description: 'A web application that tracks employee performance and provides insightful feedback.',  techStack: ['ReactJS', 'HTML', 'CSS', 'NodeJS', 'MySQL'] },
+  { src: movies, title: 'Filmpire', description: 'Filmpire offers a comprehensive database of movies, TV shows, actors, and more, powered by the TMDB API. Explore detailed information, reviews, trailers, and ratings to enhance your viewing experience',  techStack: ['ReactJS','HTML/CSS','Javascript', 'Firebase', 'MovieDB API'] },
   { src: flight, title: 'Prediction of Flight Cancellation', description: 'Prediction of flight cancellation using SMOTE Analysis, Regression and different classifiers.', techStack: ['Python', 'SKLearn', 'Pandas'] },
   { src: deepfake, title: 'Reddit Deepfake Network Analysis', description: 'Network Analysis and Topic Modeling on Deepfake technology using NLP techniques.',  techStack: ['Python', 'NLP', 'NetworkX'] },
   { src: Sentimental, title: 'Sentiments of users on wild animal welfare', description: 'Sentiment analysis on societal perceptions and attitudes toward wild animal welfare.', techStack: ['JavaScript', 'MongoDB', 'Express', 'NodeJS']},
