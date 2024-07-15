@@ -21,23 +21,23 @@ const Resumepage = ({ shouldOpen }) => {
       });
   }, [shouldOpen]);
 
-  return (
-    <div>
-      {resumeUrl ? (
-       <button onClick={() => {
-        const uniqueUrl = `${resumeUrl}?timestamp=${new Date().getTime()}`;
-console.log("Trying to open:", uniqueUrl); // Add this line
-window.open(uniqueUrl, '_blank').focus();
+//   return (
+//     <div>
+//       {resumeUrl ? (
+//        <button onClick={() => {
+//         const uniqueUrl = `${resumeUrl}?timestamp=${new Date().getTime()}`;
+// console.log("Trying to open:", uniqueUrl); // Add this line
+// window.open(uniqueUrl, '_blank').focus();
 
-      }}>
-        Open Resume
-      </button>
+//       }}>
+//         Open Resume
+//       </button>
       
-      ) : (
-        <p>Loading...</p>
-      )}
-    </div>
-  );
+//       ) : (
+//         <p>Loading...</p>
+//       )}
+//     </div>
+//   );
 };
 
 export default Resumepage;
