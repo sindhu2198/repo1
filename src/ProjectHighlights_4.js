@@ -18,7 +18,7 @@ const toggleDropdownVisibility = () => {
   };
 
     useEffect(() => {
-      const project1Ref = ref(storage, 'gs://portfolio-299d7.appspot.com/sentimental_analysis.pdf.pdf');
+      const project1Ref = ref(storage, 'gs://portfolio-299d7.appspot.com/sentimental_analysis.pdf');
   
       getDownloadURL(project1Ref)
         .then((url) => {
@@ -54,11 +54,12 @@ const toggleDropdownVisibility = () => {
                     </button>
                     {isDropdownVisible && (
   <div className="projects-dropdown-content">
-    <a href="/project1">Filmpire</a>
-    <a href="/project2">Prediction of Flight Cancellation</a>
-    <a href="/project3">Reddit Deepfake Network Analysis</a>
-    <a href="/project5">HR Analytics using PowerBI</a>
-    <a href="/project6">Diet panner bot using UiPath.</a>
+   <a href="/project1">Filmpire</a>
+    <a href="/project2">HealthMate</a>
+    <a href="/project3">Crime Analytics using PowerBI</a>
+    <a href="/project4">Sentimental Analysis of Reddit users on wild animals welfare</a>
+    <a href="/project6">Prediction of Flight Cancellation using Kaggle Dataset</a>
+    <a href="/project5">Reddit Deepfake Network Analysis</a>
   </div>
                     )}
 </div>
@@ -101,6 +102,20 @@ const toggleDropdownVisibility = () => {
       Visit GitHub Repo
     </a></td>
                             </tr>
+                            <tr>
+                <td>Project Report</td>
+                <td>
+                  {project1Url ? (
+                    <a href={project1Url} target="_blank" rel="noopener noreferrer" className="blue-link">
+                      Open Report
+                    </a>
+                  ) : (
+                    "Loading..."
+                  )}
+                </td>
+              </tr>
+                            
+                              
                             
                         </tbody>
                     </table>

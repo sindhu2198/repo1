@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './ProjectHighlights_1.css';
-import yoga from "./AllImages/flight.png";
+import yoga from "./AllImages/diet2.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import { getDownloadURL, ref } from "firebase/storage";
 import { storage } from './firebaseConfig';
@@ -55,10 +55,11 @@ const toggleDropdownVisibility = () => {
                     {isDropdownVisible && (
   <div className="projects-dropdown-content">
     <a href="/project1">Filmpire</a>
-    <a href="/project3">Reddit Deep Sentimental Analysis</a>
+    <a href="/project2">HealthMate</a>
+    <a href="/project3">Crime Analytics using PowerBI</a>
     <a href="/project4">Sentimental Analysis of Reddit users on wild animals welfare</a>
-    <a href="/project5">HR Analytics using PowerBI</a>
-    <a href="/project6">Diet panner bot using UiPath.</a>
+    <a href="/project6">Prediction of Flight Cancellation using Kaggle Dataset</a>
+    <a href="/project5">Reddit Deepfake Network Analysis</a>
     {/* Add more project links as needed */}
   </div>
                     )}
@@ -77,13 +78,13 @@ const toggleDropdownVisibility = () => {
                         <thead>
                             <tr>
                                 <th>Project Name</th>
-                                <th>Prediction of Flight Cancellation using Kaggle Dataset</th>
+                                <th>HealthMate</th>
                             </tr>
                         </thead>
                         <tbody>
                         <tr>
                                 <td>Tech Stack</td>
-                                <td> Python, Adasyn, Classifiers, Tableau, sklearn, pandas, numpy, Regression</td>
+                                <td> MongoDB, Express, ReactJS, NodeJS, HTML/CSS, JavaScript</td>
                             </tr>
                             <tr>
                                 <td>Time Duration</td>
@@ -95,7 +96,7 @@ const toggleDropdownVisibility = () => {
                             </tr>
                             <tr>
                                 <td>Github Link</td>
-                                <td> <a href="https://github.com/sindhu2198/Flight_prediction" 
+                                <td> <a href="https://github.com/sindhu2198/healthmate-sindhu" 
        target="_blank" 
        rel="noopener noreferrer" 
        className="blue-link">
@@ -103,17 +104,14 @@ const toggleDropdownVisibility = () => {
     </a></td>
                             </tr>
                             <tr>
-                <td>Project Report</td>
-                <td>
-                  {project1Url ? (
-                    <a href={project1Url} target="_blank" rel="noopener noreferrer" className="blue-link">
-                      Open Report
-                    </a>
-                  ) : (
-                    "Loading..."
-                  )}
-                </td>
-              </tr>
+                                <td>Project Link</td>
+                                <td> <a href="https://healthmate-sindhu.onrender.com/" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       className="blue-link">
+      View Project
+    </a></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

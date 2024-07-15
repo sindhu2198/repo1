@@ -109,11 +109,17 @@ body.project-highlights-body {
   display: flex;
   justify-content: space-between; /* Distributes items evenly */
   align-items: center;
-  padding-top: 40px;
+  padding-top: 10px; /* Adjusted to meet the 10px requirement */
   position: absolute; /* To place it over the image */
   width: 100%;
   top: 0;
   z-index: 10; /* Higher value ensures it stays above other elements */
+}
+
+.image-container {
+  height: 50vh; /* 50% of the viewport height */
+  padding-top: 10px; /* Ensures it starts right after the navigation bar */
+  overflow: hidden; /* Hides any overflow */
 }
 
 
@@ -195,14 +201,6 @@ body.project-highlights-body {
 
 /* ProjectHighlights_1.css */
 
-.image-container {
-  position: relative;
-}
-
-.image-container img {
-  width: 100%;
-  display: block;
-}
 
 .project-overlay {
   position: absolute;

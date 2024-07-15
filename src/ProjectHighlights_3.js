@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './ProjectHighlights_1.css';
-import deepfake from "./AllImages/deepfake.png";
+import  powerbi from "./AllImages/crime2.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import { getDownloadURL, ref } from "firebase/storage";
 import { storage } from './firebaseConfig';
@@ -12,11 +12,11 @@ const ProjectHighlights_3 = ({ shouldOpen }) => {
     const handleBackClick = () => {
       console.log("Back button clicked, navigating to /"); // Debug log
         navigate('/'); // Navigates to the home page
-    } 
-const toggleDropdownVisibility = () => {
-      setIsDropdownVisible(!isDropdownVisible);
-  };
-
+    }
+    const toggleDropdownVisibility = () => {
+          setIsDropdownVisible(!isDropdownVisible);
+      };
+    
     useEffect(() => {
       const project1Ref = ref(storage, 'gs://portfolio-299d7.appspot.com/SMM_final_prj-3.pdf');
   
@@ -54,11 +54,12 @@ const toggleDropdownVisibility = () => {
                     </button>
                     {isDropdownVisible && (
   <div className="projects-dropdown-content">
-    <a href="/project1">Filmpire</a>
-    <a href="/project2">Prediction of Flight Cancellation</a>
+   <a href="/project1">Filmpire</a>
+    <a href="/project2">HealthMate</a>
+    <a href="/project3">Crime Analytics using PowerBI</a>
     <a href="/project4">Sentimental Analysis of Reddit users on wild animals welfare</a>
-    <a href="/project5">HR Analytics using PowerBI</a>
-    <a href="/project6">Diet panner bot using UiPath.</a>
+    <a href="/project6">Prediction of Flight Cancellation using Kaggle Dataset</a>
+    <a href="/project5">Reddit Deepfake Network Analysis</a>
     {/* Add more project links as needed */}
   </div>
                     )}
@@ -66,7 +67,7 @@ const toggleDropdownVisibility = () => {
 
       </div>
             <div className="image-container">
-                <img src={deepfake} alt="Your Image" />
+                <img src={powerbi} alt="Your Image" />
             </div>
             <div className="table-container">
                 <div className="project_hcard">
@@ -77,13 +78,13 @@ const toggleDropdownVisibility = () => {
                         <thead>
                             <tr>
                                 <th>Project Name</th>
-                                <th>Network Analysis and Topic Modeling on Deepfake technology</th>
+                                <th> Crime Analytics using PowerBI .</th>
                             </tr>
                         </thead>
                         <tbody>
                         <tr>
                                 <td>Tech Stack</td>
-                                <td> Python,PRAW, LDA, WordCloud, Network Analysis, Topic Modelling</td>
+                                <td> Data Preprocessing, Power BI</td>
                             </tr>
                             <tr>
                                 <td>Time Duration</td>
@@ -93,27 +94,17 @@ const toggleDropdownVisibility = () => {
                                 <td>Status</td>
                                 <td>Completed</td>
                             </tr>
+                            
                             <tr>
-                                <td>Github Link</td>
-                                <td> <a href="https://github.iu.edu/duanim/SMM" 
+                                <td>Project Link</td>
+                                <td> <a href="https://app.powerbi.com/view?r=eyJrIjoiODJmN2MwZGUtNmE0Ni00MDU2LWI2MGMtNGE0NThmZTUyNGM3IiwidCI6IjExMTNiZTM0LWFlZDEtNGQwMC1hYjRiLWNkZDAyNTEwYmU5MSIsImMiOjN9" 
        target="_blank" 
        rel="noopener noreferrer" 
        className="blue-link">
-      Visit GitHub Repo
+      View Project
     </a></td>
                             </tr>
-                            <tr>
-                <td>Project Report</td>
-                <td>
-                  {project1Url ? (
-                    <a href={project1Url} target="_blank" rel="noopener noreferrer" className="blue-link">
-                      Open Report
-                    </a>
-                  ) : (
-                    "Loading..."
-                  )}
-                </td>
-              </tr>
+                           
                         </tbody>
                     </table>
                 </div>

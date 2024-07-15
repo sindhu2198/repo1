@@ -32,6 +32,23 @@ function Timelinepage({ contactRef, scrollToSection }) {
             description: "Developed a sophisticated web-based application utilizing React for the front-end and NodeJS for the backend, enhanced by intricate designs created with HTML and CSS. This application serves as a resource for movie lovers with an intuitive user interface, the application empowers them to provide ratings, add movies to their watchlist and favourites based on their interest. The data integrity and security is taken care by the moviedb org api that provides all movie related information. This application also offers scalability for increasing volume of data. Moreover, the application is designed to adapt seamlessly across devices.",
             techTools: ["MySQL","ReactJs", "NodeJS","HTML", "CSS"]
         },
+
+        { 
+            company: "HealthMate", 
+            year: "2023",
+            university: "Project",
+            dateRange: "2023",
+            description: "Healthmate enables users to track various aspects of their wellness and fitness, as well as access workout programs and resources online to improve their physical and mental health.",
+            techTools: ["MongoDB","ReactJs", "NodeJS","HTML", "CSS"]
+        },
+        { 
+            company: "Crime Analytics using PowerBI", 
+            year: "2023",
+            university: "Project",
+            dateRange: "2023",
+            description: "This project explores dynamic crime data visualizations from January 2020 to December 2023 to fully address the complex issues raised by crime in Los Angeles",
+            techTools: ["PowerBi","Data Processing", "NodeJS","HTML", "CSS"]
+        },
         { 
             company: "Network Analysis and Topic Modeling on Deepfake technology", 
             year: "2022",
@@ -74,23 +91,6 @@ function Timelinepage({ contactRef, scrollToSection }) {
             dateRange: "June 2016 - May 2020",
             description: " Bachelor's in Electronics and Communication Engineering",
             techTools: ["JAVA", "C", "Data Structures", "Python"]
-        },
-       
-        { 
-            company: "HR Analytics using Power BI", 
-            year: "2019",
-            university: "Project",
-            dateRange: "November 2019",
-            description: "In this project, I utilized Power BI to create a comprehensive HR analytics dashboard that provides insights into the workforce's composition, performance, and retention. The dashboard consolidates diverse HR metrics into a single platform, enabling HR professionals to make informed decisions.",
-            techTools: ["PowerBi"]
-        },
-        { 
-            company: "Uipath Diet Planner bot", 
-            year: "2019",
-            university: "Project",
-            dateRange: " Oct 2019-Nov 2019",
-            description: "The UiPath Diet Planner Bot transformed the way users approach their nutrition, offering a personalized, interactive, and automated solution for meal planning. The automation not only saved users time but also ensured a more scientific and data-driven approach to dieting, enhancing user adherence and health outcomes.",
-            techTools: ["Uipath"]
         }
     ];
 
