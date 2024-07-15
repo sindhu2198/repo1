@@ -17,6 +17,7 @@ const ProjectHighlights_3 = ({ shouldOpen }) => {
           setIsDropdownVisible(!isDropdownVisible);
       };
     
+      
     useEffect(() => {
       const project1Ref = ref(storage, 'gs://portfolio-299d7.appspot.com/SMM_final_prj-3.pdf');
   
